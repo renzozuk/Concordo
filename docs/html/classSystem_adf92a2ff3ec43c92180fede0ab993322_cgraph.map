@@ -1,0 +1,5 @@
+<map id="System::listParticipants" name="System::listParticipants">
+<area shape="rect" id="node1" title="Lista os participantes do servidor atual." alt="" coords="5,31,180,57"/>
+<area shape="rect" id="node2" href="$classServer.html#ab3e5ca3979006745dfd8f1ec4c06c885" title="Obtém o nome do servidor." alt="" coords="261,5,393,32"/>
+<area shape="rect" id="node3" href="$classSystem.html#a2b0e82bcd051b861bbecbab74f648598" title="Obtém o nome de usuário correspondente a um determinado ID." alt="" coords="228,56,427,83"/>
+</map>

@@ -1,0 +1,117 @@
+\hypertarget{classMessage}{}\doxysection{Referência da Classe Message}
+\label{classMessage}\index{Message@{Message}}
+
+
+{\ttfamily \#include $<$message.\+h$>$}
+
+
+
+Diagrama de colaboração para Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classMessage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMessage_a4fc4f717b634e66070366cb7722d7761}{Message}} ()
+\item 
+\mbox{\hyperlink{classMessage_a3f7275462831f787a861271687bcad67}{$\sim$\+Message}} ()
+\item 
+\mbox{\hyperlink{classMessage_af4ed78af8096daf0140c4780f39a8a1b}{Message}} (string, int, string)
+\item 
+string \mbox{\hyperlink{classMessage_a3ea66a4fb4757732df72787f01f8ec78}{get\+Date\+Time}} ()
+\item 
+int \mbox{\hyperlink{classMessage_a6cfa36accfb722f2ed116769a0f3fbe5}{get\+Sent\+By}} ()
+\item 
+string \mbox{\hyperlink{classMessage_a3d4ceea44b0922802d6ae99063ac4e48}{get\+Content}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classMessage_a4fc4f717b634e66070366cb7722d7761}\label{classMessage_a4fc4f717b634e66070366cb7722d7761}} 
+\index{Message@{Message}!Message@{Message}}
+\index{Message@{Message}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMessage_a3f7275462831f787a861271687bcad67}\label{classMessage_a3f7275462831f787a861271687bcad67}} 
+\index{Message@{Message}!````~Message@{$\sim$Message}}
+\index{````~Message@{$\sim$Message}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{$\sim$Message()}{~Message()}}
+{\footnotesize\ttfamily Message\+::$\sim$\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classMessage_af4ed78af8096daf0140c4780f39a8a1b}\label{classMessage_af4ed78af8096daf0140c4780f39a8a1b}} 
+\index{Message@{Message}!Message@{Message}}
+\index{Message@{Message}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}\item[{string}]{datetime,  }\item[{int}]{sent\+By,  }\item[{string}]{content }\end{DoxyParamCaption})}
+
+Construtor da classe \mbox{\hyperlink{classMessage}{Message}}. 
+\begin{DoxyParams}{Parâmetros}
+{\em datetime} & A data e hora da mensagem. \\
+\hline
+{\em sent\+By} & O remetente da mensagem. \\
+\hline
+{\em content} & O conteúdo da mensagem. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classMessage_a3d4ceea44b0922802d6ae99063ac4e48}\label{classMessage_a3d4ceea44b0922802d6ae99063ac4e48}} 
+\index{Message@{Message}!getContent@{getContent}}
+\index{getContent@{getContent}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getContent()}{getContent()}}
+{\footnotesize\ttfamily string Message\+::get\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtém o conteúdo da mensagem. \begin{DoxyReturn}{Retorna}
+O conteúdo da mensagem. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMessage_a3d4ceea44b0922802d6ae99063ac4e48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMessage_a3ea66a4fb4757732df72787f01f8ec78}\label{classMessage_a3ea66a4fb4757732df72787f01f8ec78}} 
+\index{Message@{Message}!getDateTime@{getDateTime}}
+\index{getDateTime@{getDateTime}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getDateTime()}{getDateTime()}}
+{\footnotesize\ttfamily string Message\+::get\+Date\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtém a data e hora da mensagem. \begin{DoxyReturn}{Retorna}
+A data e hora da mensagem. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMessage_a3ea66a4fb4757732df72787f01f8ec78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMessage_a6cfa36accfb722f2ed116769a0f3fbe5}\label{classMessage_a6cfa36accfb722f2ed116769a0f3fbe5}} 
+\index{Message@{Message}!getSentBy@{getSentBy}}
+\index{getSentBy@{getSentBy}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getSentBy()}{getSentBy()}}
+{\footnotesize\ttfamily int Message\+::get\+Sent\+By (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtém o remetente da mensagem. \begin{DoxyReturn}{Retorna}
+O remetente da mensagem. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMessage_a6cfa36accfb722f2ed116769a0f3fbe5_icgraph}
+\end{center}
+\end{figure}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{message_8h}{message.\+h}}\item 
+src/\mbox{\hyperlink{message_8cpp}{message.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,611 @@
+\hypertarget{classSystem}{}\doxysection{Referência da Classe System}
+\label{classSystem}\index{System@{System}}
+
+
+{\ttfamily \#include $<$system.\+h$>$}
+
+
+
+Diagrama de colaboração para System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSystem_ae317936c9bcf1374d61745572e0f2f8a}{System}} ()
+\item 
+\mbox{\hyperlink{classSystem_a3be70bb338e3f062f821173fd15680d0}{$\sim$\+System}} ()
+\item 
+void \mbox{\hyperlink{classSystem_a39f4616c5ae2749242dbf9d20bff7180}{Channels\+Destroyer}} ()
+\item 
+\mbox{\hyperlink{classUser}{User}} \mbox{\hyperlink{classSystem_a63c63d051c8dbafa315bf0cc3ed02b9f}{get\+Logged\+In\+User}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o usuário atualmente logado no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a12354c66ecb3c87dfc47cd80431b9699}{set\+Logged\+In\+User}} (\mbox{\hyperlink{classUser}{User}})
+\begin{DoxyCompactList}\small\item\em Define o usuário atualmente logado no sistema. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classSystem_a2b0e82bcd051b861bbecbab74f648598}{get\+User\+Name\+By\+Id}} (int)
+\begin{DoxyCompactList}\small\item\em Obtém o nome de usuário correspondente a um determinado ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_a114ea1f48109814c933923039fdd6338}{al\+Exist\+User}} (string)
+\begin{DoxyCompactList}\small\item\em Verifica se já existe um usuário com o mesmo e-\/mail no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a7e8ac0b947f89af1b2c7a8f2cfa7e226}{add\+User\+To\+System}} (const string \&, const string \&, const string \&)
+\begin{DoxyCompactList}\small\item\em Adiciona um usuário ao sistema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_a2cfbc65e7427503694f3a23227285225}{logging\+In}} (string, string)
+\begin{DoxyCompactList}\small\item\em Faz o login de um usuário no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a66379777d789c071beb96b3b0253f212}{disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Desconecta o usuário atualmente logado no sistema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServer}{Server}} \mbox{\hyperlink{classSystem_acac47c75831ae3a6835b3c6685ea687e}{get\+Current\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o servidor atualmente selecionado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_ad1de91e5ec17795f2994de4ee0635bc1}{set\+Current\+Server}} (\mbox{\hyperlink{classServer}{Server}})
+\begin{DoxyCompactList}\small\item\em Define o servidor atualmente selecionado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_a60259544cd26e1c21db54dd02efdcf7d}{al\+Exist\+Server}} (string)
+\begin{DoxyCompactList}\small\item\em Verifica se já existe um servidor com o mesmo nome no sistema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_aad6e5658dc8c78f4118ba16d500ec3ef}{add\+Server\+To\+System}} (string)
+\begin{DoxyCompactList}\small\item\em Adiciona um servidor ao sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a77590a4780762bd95b1bf1796a656f39}{set\+Server\+Description}} (string, string)
+\begin{DoxyCompactList}\small\item\em Define a descrição de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a5dd00e64d9759d561ef9224d9bca2e05}{set\+Server\+Invite\+Code}} (string, string)
+\begin{DoxyCompactList}\small\item\em Define o código de convite de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_ae842ae51dc3d5c3c4aac2521a6bc2dad}{list\+Servers}} ()
+\begin{DoxyCompactList}\small\item\em Lista os servidores disponíveis no sistema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_a91eb3a9c2a7515774393b018e77e6d55}{entering\+Server}} (string)
+\begin{DoxyCompactList}\small\item\em Realiza a entrada de um usuário em um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_ad1398f50c21ef7912b0b73fc51da90f4}{remove\+Server}} (string)
+\begin{DoxyCompactList}\small\item\em Remove um servidor do sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a6ae6d7b3a484e1dbfde2d270c839792c}{leaving\+Server}} (bool)
+\begin{DoxyCompactList}\small\item\em Realiza a saída de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_adf92a2ff3ec43c92180fede0ab993322}{list\+Participants}} ()
+\begin{DoxyCompactList}\small\item\em Lista os participantes do servidor atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a15e7e3b270b46efb890029fe6aee34f1}{set\+Current\+Channel}} (\mbox{\hyperlink{classChannel}{Channel}})
+\item 
+void \mbox{\hyperlink{classSystem_a82164836a544570377390f22af619ad9}{new\+Channel}} (string, bool)
+\item 
+void \mbox{\hyperlink{classSystem_a36ae0a35c6b1364dceca3f188c127242}{print\+Channels}} ()
+\item 
+bool \mbox{\hyperlink{classSystem_a9515034ff7ea3cf86b40a0b0fa664e1f}{entering\+Channel}} (string, bool)
+\item 
+void \mbox{\hyperlink{classSystem_a776946c40e368ec28b2b648c4cc6c30a}{leaving\+Channel}} ()
+\item 
+void \mbox{\hyperlink{classSystem_a97b5eb5dcbbb3f428d9946d90ba33329}{sending\+Message}} (string, string)
+\item 
+void \mbox{\hyperlink{classSystem_ad3be898dfe00394b6d4814d664f626b2}{print\+Messages}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classSystem_ae317936c9bcf1374d61745572e0f2f8a}\label{classSystem_ae317936c9bcf1374d61745572e0f2f8a}} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSystem_a3be70bb338e3f062f821173fd15680d0}\label{classSystem_a3be70bb338e3f062f821173fd15680d0}} 
+\index{System@{System}!````~System@{$\sim$System}}
+\index{````~System@{$\sim$System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{$\sim$System()}{~System()}}
+{\footnotesize\ttfamily System\+::$\sim$\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classSystem_aad6e5658dc8c78f4118ba16d500ec3ef}\label{classSystem_aad6e5658dc8c78f4118ba16d500ec3ef}} 
+\index{System@{System}!addServerToSystem@{addServerToSystem}}
+\index{addServerToSystem@{addServerToSystem}!System@{System}}
+\doxysubsubsection{\texorpdfstring{addServerToSystem()}{addServerToSystem()}}
+{\footnotesize\ttfamily bool System\+::add\+Server\+To\+System (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Adiciona um servidor ao sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_aad6e5658dc8c78f4118ba16d500ec3ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a7e8ac0b947f89af1b2c7a8f2cfa7e226}\label{classSystem_a7e8ac0b947f89af1b2c7a8f2cfa7e226}} 
+\index{System@{System}!addUserToSystem@{addUserToSystem}}
+\index{addUserToSystem@{addUserToSystem}!System@{System}}
+\doxysubsubsection{\texorpdfstring{addUserToSystem()}{addUserToSystem()}}
+{\footnotesize\ttfamily void System\+::add\+User\+To\+System (\begin{DoxyParamCaption}\item[{const string \&}]{email,  }\item[{const string \&}]{password,  }\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Adiciona um usuário ao sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em email} & O e-\/mail do usuário. \\
+\hline
+{\em password} & A senha do usuário. \\
+\hline
+{\em name} & O nome do usuário. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a7e8ac0b947f89af1b2c7a8f2cfa7e226_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a60259544cd26e1c21db54dd02efdcf7d}\label{classSystem_a60259544cd26e1c21db54dd02efdcf7d}} 
+\index{System@{System}!alExistServer@{alExistServer}}
+\index{alExistServer@{alExistServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{alExistServer()}{alExistServer()}}
+{\footnotesize\ttfamily bool System\+::al\+Exist\+Server (\begin{DoxyParamCaption}\item[{string}]{newname }\end{DoxyParamCaption})}
+
+
+
+Verifica se já existe um servidor com o mesmo nome no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em newname} & O novo nome do servidor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Verdadeiro se o servidor já existir, falso caso contrário. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a60259544cd26e1c21db54dd02efdcf7d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a114ea1f48109814c933923039fdd6338}\label{classSystem_a114ea1f48109814c933923039fdd6338}} 
+\index{System@{System}!alExistUser@{alExistUser}}
+\index{alExistUser@{alExistUser}!System@{System}}
+\doxysubsubsection{\texorpdfstring{alExistUser()}{alExistUser()}}
+{\footnotesize\ttfamily bool System\+::al\+Exist\+User (\begin{DoxyParamCaption}\item[{string}]{newemail }\end{DoxyParamCaption})}
+
+
+
+Verifica se já existe um usuário com o mesmo e-\/mail no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em newemail} & O novo e-\/mail a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Verdadeiro se o e-\/mail já existir, falso caso contrário. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a114ea1f48109814c933923039fdd6338_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a39f4616c5ae2749242dbf9d20bff7180}\label{classSystem_a39f4616c5ae2749242dbf9d20bff7180}} 
+\index{System@{System}!ChannelsDestroyer@{ChannelsDestroyer}}
+\index{ChannelsDestroyer@{ChannelsDestroyer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{ChannelsDestroyer()}{ChannelsDestroyer()}}
+{\footnotesize\ttfamily void System\+::\+Channels\+Destroyer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSystem_a66379777d789c071beb96b3b0253f212}\label{classSystem_a66379777d789c071beb96b3b0253f212}} 
+\index{System@{System}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!System@{System}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void System\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desconecta o usuário atualmente logado no sistema. 
+
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a66379777d789c071beb96b3b0253f212_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a9515034ff7ea3cf86b40a0b0fa664e1f}\label{classSystem_a9515034ff7ea3cf86b40a0b0fa664e1f}} 
+\index{System@{System}!enteringChannel@{enteringChannel}}
+\index{enteringChannel@{enteringChannel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{enteringChannel()}{enteringChannel()}}
+{\footnotesize\ttfamily bool System\+::entering\+Channel (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{bool}]{changing }\end{DoxyParamCaption})}
+
+Entra em um canal especificado. 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do canal a ser acessado. \\
+\hline
+{\em changing} & Indica se a entrada está sendo realizada como uma mudança de canal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o canal existir e a entrada for bem-\/sucedida, false caso contrário. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a9515034ff7ea3cf86b40a0b0fa664e1f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a91eb3a9c2a7515774393b018e77e6d55}\label{classSystem_a91eb3a9c2a7515774393b018e77e6d55}} 
+\index{System@{System}!enteringServer@{enteringServer}}
+\index{enteringServer@{enteringServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{enteringServer()}{enteringServer()}}
+{\footnotesize\ttfamily bool System\+::entering\+Server (\begin{DoxyParamCaption}\item[{string}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Realiza a entrada de um usuário em um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do server após o tratamento. \\
+\hline
+{\em ic} & O invite-\/code após o tratamento. \\
+\hline
+{\em parameter} & O comando de entrada, que contém o nome do servidor e pode conter o código de convite separados por espaço. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Verdadeiro se a entrada for bem-\/sucedida, falso caso contrário. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a91eb3a9c2a7515774393b018e77e6d55_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a91eb3a9c2a7515774393b018e77e6d55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_acac47c75831ae3a6835b3c6685ea687e}\label{classSystem_acac47c75831ae3a6835b3c6685ea687e}} 
+\index{System@{System}!getCurrentServer@{getCurrentServer}}
+\index{getCurrentServer@{getCurrentServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getCurrentServer()}{getCurrentServer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServer}{Server}} System\+::get\+Current\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o servidor atualmente selecionado. 
+
+\begin{DoxyReturn}{Retorna}
+O servidor atualmente selecionado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a63c63d051c8dbafa315bf0cc3ed02b9f}\label{classSystem_a63c63d051c8dbafa315bf0cc3ed02b9f}} 
+\index{System@{System}!getLoggedInUser@{getLoggedInUser}}
+\index{getLoggedInUser@{getLoggedInUser}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getLoggedInUser()}{getLoggedInUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUser}{User}} System\+::get\+Logged\+In\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o usuário atualmente logado no sistema. 
+
+\begin{DoxyReturn}{Retorna}
+O usuário atualmente logado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a2b0e82bcd051b861bbecbab74f648598}\label{classSystem_a2b0e82bcd051b861bbecbab74f648598}} 
+\index{System@{System}!getUserNameById@{getUserNameById}}
+\index{getUserNameById@{getUserNameById}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getUserNameById()}{getUserNameById()}}
+{\footnotesize\ttfamily string System\+::get\+User\+Name\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome de usuário correspondente a um determinado ID. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O ID do usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O nome do usuário correspondente ao ID. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a2b0e82bcd051b861bbecbab74f648598_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a776946c40e368ec28b2b648c4cc6c30a}\label{classSystem_a776946c40e368ec28b2b648c4cc6c30a}} 
+\index{System@{System}!leavingChannel@{leavingChannel}}
+\index{leavingChannel@{leavingChannel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{leavingChannel()}{leavingChannel()}}
+{\footnotesize\ttfamily void System\+::leaving\+Channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sai do canal atual. Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a776946c40e368ec28b2b648c4cc6c30a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a6ae6d7b3a484e1dbfde2d270c839792c}\label{classSystem_a6ae6d7b3a484e1dbfde2d270c839792c}} 
+\index{System@{System}!leavingServer@{leavingServer}}
+\index{leavingServer@{leavingServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{leavingServer()}{leavingServer()}}
+{\footnotesize\ttfamily void System\+::leaving\+Server (\begin{DoxyParamCaption}\item[{bool}]{toprint }\end{DoxyParamCaption})}
+
+
+
+Realiza a saída de um servidor. 
+
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a6ae6d7b3a484e1dbfde2d270c839792c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_adf92a2ff3ec43c92180fede0ab993322}\label{classSystem_adf92a2ff3ec43c92180fede0ab993322}} 
+\index{System@{System}!listParticipants@{listParticipants}}
+\index{listParticipants@{listParticipants}!System@{System}}
+\doxysubsubsection{\texorpdfstring{listParticipants()}{listParticipants()}}
+{\footnotesize\ttfamily void System\+::list\+Participants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lista os participantes do servidor atual. 
+
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_adf92a2ff3ec43c92180fede0ab993322_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_ae842ae51dc3d5c3c4aac2521a6bc2dad}\label{classSystem_ae842ae51dc3d5c3c4aac2521a6bc2dad}} 
+\index{System@{System}!listServers@{listServers}}
+\index{listServers@{listServers}!System@{System}}
+\doxysubsubsection{\texorpdfstring{listServers()}{listServers()}}
+{\footnotesize\ttfamily void System\+::list\+Servers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lista os servidores disponíveis no sistema. 
+
+\mbox{\Hypertarget{classSystem_a2cfbc65e7427503694f3a23227285225}\label{classSystem_a2cfbc65e7427503694f3a23227285225}} 
+\index{System@{System}!loggingIn@{loggingIn}}
+\index{loggingIn@{loggingIn}!System@{System}}
+\doxysubsubsection{\texorpdfstring{loggingIn()}{loggingIn()}}
+{\footnotesize\ttfamily bool System\+::logging\+In (\begin{DoxyParamCaption}\item[{string}]{email,  }\item[{string}]{password }\end{DoxyParamCaption})}
+
+
+
+Faz o login de um usuário no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em email} & O e-\/mail do usuário. \\
+\hline
+{\em password} & A senha do usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Verdadeiro se o login for bem-\/sucedido, falso caso contrário. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a2cfbc65e7427503694f3a23227285225_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a82164836a544570377390f22af619ad9}\label{classSystem_a82164836a544570377390f22af619ad9}} 
+\index{System@{System}!newChannel@{newChannel}}
+\index{newChannel@{newChannel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{newChannel()}{newChannel()}}
+{\footnotesize\ttfamily void System\+::new\+Channel (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{bool}]{is\+Text }\end{DoxyParamCaption})}
+
+Cria um novo canal no servidor atual. 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do novo canal. \\
+\hline
+{\em is\+Text} & Indica se o canal é um canal de texto (true) ou de voz (false). \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classSystem_a82164836a544570377390f22af619ad9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a36ae0a35c6b1364dceca3f188c127242}\label{classSystem_a36ae0a35c6b1364dceca3f188c127242}} 
+\index{System@{System}!printChannels@{printChannels}}
+\index{printChannels@{printChannels}!System@{System}}
+\doxysubsubsection{\texorpdfstring{printChannels()}{printChannels()}}
+{\footnotesize\ttfamily void System\+::print\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Imprime a lista de canais do servidor atual. Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classSystem_a36ae0a35c6b1364dceca3f188c127242_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_ad3be898dfe00394b6d4814d664f626b2}\label{classSystem_ad3be898dfe00394b6d4814d664f626b2}} 
+\index{System@{System}!printMessages@{printMessages}}
+\index{printMessages@{printMessages}!System@{System}}
+\doxysubsubsection{\texorpdfstring{printMessages()}{printMessages()}}
+{\footnotesize\ttfamily void System\+::print\+Messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Imprime as mensagens do canal atual. Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_ad3be898dfe00394b6d4814d664f626b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_ad1398f50c21ef7912b0b73fc51da90f4}\label{classSystem_ad1398f50c21ef7912b0b73fc51da90f4}} 
+\index{System@{System}!removeServer@{removeServer}}
+\index{removeServer@{removeServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{removeServer()}{removeServer()}}
+{\footnotesize\ttfamily void System\+::remove\+Server (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Remove um servidor do sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor a ser removido. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classSystem_ad1398f50c21ef7912b0b73fc51da90f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a97b5eb5dcbbb3f428d9946d90ba33329}\label{classSystem_a97b5eb5dcbbb3f428d9946d90ba33329}} 
+\index{System@{System}!sendingMessage@{sendingMessage}}
+\index{sendingMessage@{sendingMessage}!System@{System}}
+\doxysubsubsection{\texorpdfstring{sendingMessage()}{sendingMessage()}}
+{\footnotesize\ttfamily void System\+::sending\+Message (\begin{DoxyParamCaption}\item[{string}]{date,  }\item[{string}]{content }\end{DoxyParamCaption})}
+
+Envia uma mensagem para o canal atual. 
+\begin{DoxyParams}{Parâmetros}
+{\em date} & A data da mensagem. \\
+\hline
+{\em content} & O conteúdo da mensagem. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a97b5eb5dcbbb3f428d9946d90ba33329_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a15e7e3b270b46efb890029fe6aee34f1}\label{classSystem_a15e7e3b270b46efb890029fe6aee34f1}} 
+\index{System@{System}!setCurrentChannel@{setCurrentChannel}}
+\index{setCurrentChannel@{setCurrentChannel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setCurrentChannel()}{setCurrentChannel()}}
+{\footnotesize\ttfamily void System\+::set\+Current\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChannel}{Channel}}}]{current\+Channel }\end{DoxyParamCaption})}
+
+Define o canal atual do sistema. 
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel} & O canal a ser definido como atual. \\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a15e7e3b270b46efb890029fe6aee34f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_ad1de91e5ec17795f2994de4ee0635bc1}\label{classSystem_ad1de91e5ec17795f2994de4ee0635bc1}} 
+\index{System@{System}!setCurrentServer@{setCurrentServer}}
+\index{setCurrentServer@{setCurrentServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setCurrentServer()}{setCurrentServer()}}
+{\footnotesize\ttfamily void System\+::set\+Current\+Server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classServer}{Server}}}]{current\+Server }\end{DoxyParamCaption})}
+
+
+
+Define o servidor atualmente selecionado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Server} & O servidor atualmente selecionado. \\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_ad1de91e5ec17795f2994de4ee0635bc1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a12354c66ecb3c87dfc47cd80431b9699}\label{classSystem_a12354c66ecb3c87dfc47cd80431b9699}} 
+\index{System@{System}!setLoggedInUser@{setLoggedInUser}}
+\index{setLoggedInUser@{setLoggedInUser}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setLoggedInUser()}{setLoggedInUser()}}
+{\footnotesize\ttfamily void System\+::set\+Logged\+In\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUser}{User}}}]{current\+Logged\+In\+User }\end{DoxyParamCaption})}
+
+
+
+Define o usuário atualmente logado no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Logged\+In\+User} & O usuário atualmente logado. \\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem_a12354c66ecb3c87dfc47cd80431b9699_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a77590a4780762bd95b1bf1796a656f39}\label{classSystem_a77590a4780762bd95b1bf1796a656f39}} 
+\index{System@{System}!setServerDescription@{setServerDescription}}
+\index{setServerDescription@{setServerDescription}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setServerDescription()}{setServerDescription()}}
+{\footnotesize\ttfamily void System\+::set\+Server\+Description (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{desc }\end{DoxyParamCaption})}
+
+
+
+Define a descrição de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor. \\
+\hline
+{\em desc} & A nova descrição do servidor. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classSystem_a77590a4780762bd95b1bf1796a656f39_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSystem_a5dd00e64d9759d561ef9224d9bca2e05}\label{classSystem_a5dd00e64d9759d561ef9224d9bca2e05}} 
+\index{System@{System}!setServerInviteCode@{setServerInviteCode}}
+\index{setServerInviteCode@{setServerInviteCode}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setServerInviteCode()}{setServerInviteCode()}}
+{\footnotesize\ttfamily void System\+::set\+Server\+Invite\+Code (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{ic }\end{DoxyParamCaption})}
+
+
+
+Define o código de convite de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor. \\
+\hline
+{\em ic} & O novo código de convite. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classSystem_a5dd00e64d9759d561ef9224d9bca2e05_cgraph}
+\end{center}
+\end{figure}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{system_8h}{system.\+h}}\item 
+src/\mbox{\hyperlink{system_8cpp}{system.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,325 @@
+\hypertarget{main_8cpp}{}\doxysection{Referência do Arquivo src/main.cpp}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Implementação da leitura do script e dos comandos a serem executados pelo usuário.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$system.\+h$>$}\newline
+Gráfico de dependência de inclusões para main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{main_8cpp_aad322dd5d64050ad75d6cb3e5d884f2d}{splitting}} (string line, bool isthefirst)
+\begin{DoxyCompactList}\small\item\em Divide uma string em duas partes no primeiro espaço encontrado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a608e4172c1d22eb1662ead5122e66228}{only\+Spaces}} (string name)
+\begin{DoxyCompactList}\small\item\em Verifica se uma string contém apenas espaços. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a5ece2743fd4d75edf98346f47cd34b80}{signup}} (string parameter)
+\begin{DoxyCompactList}\small\item\em Trata o comando de cadastro de usuário. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_ad3ef85c04bffdf553e5cebb8c7a7e5d2}{login}} (string parameter)
+\begin{DoxyCompactList}\small\item\em Trata o comando de login. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_abb68901eb3e2f9d8133c5fd246109b6b}{creating\+Server}} (string name)
+\begin{DoxyCompactList}\small\item\em Trata o comando de criação de servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a507c56a6993e9ef0f724800f44c9d1ae}{setting\+Server\+Description}} (string parameter)
+\begin{DoxyCompactList}\small\item\em Trata o comando de definição de descrição do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a924a9af4b202e6095a3359143ee13f17}{setting\+Server\+Invite\+Code}} (string parameter)
+\begin{DoxyCompactList}\small\item\em Trata o comando de definição do código de convite do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_aaa1cba6e46081fc6587c11bd85a5936f}{removing\+Server}} (string parameter)
+\begin{DoxyCompactList}\small\item\em Trata o comando de remoção de servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_af7cb3afdaa40e4e0c264b2952bf833ab}{creating\+Channel}} (string parameter)
+\begin{DoxyCompactList}\small\item\em Cria um canal com base nos parâmetros fornecidos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_ad37038c5a2a463a9d29021a962da559d}{entering\+Channel}} (string parameter, bool changing)
+\begin{DoxyCompactList}\small\item\em Entra em um canal existente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40}{reading\+Commands}} (vector$<$ string $>$ commands)
+\begin{DoxyCompactList}\small\item\em Lê e processa os comandos do usuário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função principal do aplicativo Concordo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação da leitura do script e dos comandos a serem executados pelo usuário. 
+
+\begin{DoxyAuthor}{Autor}
+Renzo Zukeram 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2023-\/07-\/05
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{main_8cpp_af7cb3afdaa40e4e0c264b2952bf833ab}\label{main_8cpp_af7cb3afdaa40e4e0c264b2952bf833ab}} 
+\index{main.cpp@{main.cpp}!creatingChannel@{creatingChannel}}
+\index{creatingChannel@{creatingChannel}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{creatingChannel()}{creatingChannel()}}
+{\footnotesize\ttfamily void creating\+Channel (\begin{DoxyParamCaption}\item[{string}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Cria um canal com base nos parâmetros fornecidos. 
+
+Esta função cria um canal com base nos parâmetros fornecidos, que incluem o nome do canal e o tipo do canal. O tipo do canal pode ser \char`\"{}texto\char`\"{} ou \char`\"{}voz\char`\"{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em parameter} & Uma string contendo os parâmetros necessários para criar o canal. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{main_8cpp_af7cb3afdaa40e4e0c264b2952bf833ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_abb68901eb3e2f9d8133c5fd246109b6b}\label{main_8cpp_abb68901eb3e2f9d8133c5fd246109b6b}} 
+\index{main.cpp@{main.cpp}!creatingServer@{creatingServer}}
+\index{creatingServer@{creatingServer}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{creatingServer()}{creatingServer()}}
+{\footnotesize\ttfamily bool creating\+Server (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Trata o comando de criação de servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor a ser criado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_ad37038c5a2a463a9d29021a962da559d}\label{main_8cpp_ad37038c5a2a463a9d29021a962da559d}} 
+\index{main.cpp@{main.cpp}!enteringChannel@{enteringChannel}}
+\index{enteringChannel@{enteringChannel}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{enteringChannel()}{enteringChannel()}}
+{\footnotesize\ttfamily bool entering\+Channel (\begin{DoxyParamCaption}\item[{string}]{parameter,  }\item[{bool}]{changing }\end{DoxyParamCaption})}
+
+
+
+Entra em um canal existente. 
+
+Esta função permite que o usuário entre em um canal existente com base no parâmetro fornecido.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em parameter} & Uma string contendo o parâmetro necessário para entrar no canal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um valor booleano indicando se a entrada no canal foi bem-\/sucedida ou não. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ad3ef85c04bffdf553e5cebb8c7a7e5d2}\label{main_8cpp_ad3ef85c04bffdf553e5cebb8c7a7e5d2}} 
+\index{main.cpp@{main.cpp}!login@{login}}
+\index{login@{login}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily bool login (\begin{DoxyParamCaption}\item[{string}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Trata o comando de login. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em parameter} & A string de parâmetro contendo e-\/mail e senha. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Verdadeiro se o login for bem-\/sucedido, falso caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Função principal do aplicativo Concordo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em argc} & O número de argumentos a serem recebidos. \\
+\hline
+{\em argv} & Um array composto pelos argumentos recebidos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O status de saída do aplicativo. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a608e4172c1d22eb1662ead5122e66228}\label{main_8cpp_a608e4172c1d22eb1662ead5122e66228}} 
+\index{main.cpp@{main.cpp}!onlySpaces@{onlySpaces}}
+\index{onlySpaces@{onlySpaces}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{onlySpaces()}{onlySpaces()}}
+{\footnotesize\ttfamily bool only\+Spaces (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Verifica se uma string contém apenas espaços. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & A string de entrada a ser verificada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Verdadeiro se a string contém apenas espaços, falso caso contrário. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{main_8cpp_a608e4172c1d22eb1662ead5122e66228_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40}\label{main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40}} 
+\index{main.cpp@{main.cpp}!readingCommands@{readingCommands}}
+\index{readingCommands@{readingCommands}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{readingCommands()}{readingCommands()}}
+{\footnotesize\ttfamily void reading\+Commands (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{commands }\end{DoxyParamCaption})}
+
+
+
+Lê e processa os comandos do usuário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em commands} & O vetor contendo os comandos do script fornecido pelo usuário. \\
+\hline
+{\em choice} & O comando recebido do arquivo ou digitado pelo usuário. \\
+\hline
+{\em parameter} & Reune os parâmetros do comando digitado pelo usuário. \\
+\hline
+{\em tf} & Um boolean auxiliar para algumas situações específicas. \\
+\hline
+{\em logstage} & Verifica em qual nível de acesso o usuário está. Por exemplo\+: Quando logstage = 0\+: usuário não logado; Quando logstage = 1\+: usuário logado; Quando logstage = 2\+: usuário logado e visualizando um servidor; Quando logstage = 3\+: usuário logado, visualizando um servidor e visualizando um canal. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_aaa1cba6e46081fc6587c11bd85a5936f}\label{main_8cpp_aaa1cba6e46081fc6587c11bd85a5936f}} 
+\index{main.cpp@{main.cpp}!removingServer@{removingServer}}
+\index{removingServer@{removingServer}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{removingServer()}{removingServer()}}
+{\footnotesize\ttfamily void removing\+Server (\begin{DoxyParamCaption}\item[{string}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Trata o comando de remoção de servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em parameter} & O nome do servidor a ser removido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a507c56a6993e9ef0f724800f44c9d1ae}\label{main_8cpp_a507c56a6993e9ef0f724800f44c9d1ae}} 
+\index{main.cpp@{main.cpp}!settingServerDescription@{settingServerDescription}}
+\index{settingServerDescription@{settingServerDescription}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{settingServerDescription()}{settingServerDescription()}}
+{\footnotesize\ttfamily void setting\+Server\+Description (\begin{DoxyParamCaption}\item[{string}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Trata o comando de definição de descrição do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em parameter} & A string de parâmetro contendo o nome do servidor e a descrição. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a924a9af4b202e6095a3359143ee13f17}\label{main_8cpp_a924a9af4b202e6095a3359143ee13f17}} 
+\index{main.cpp@{main.cpp}!settingServerInviteCode@{settingServerInviteCode}}
+\index{settingServerInviteCode@{settingServerInviteCode}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{settingServerInviteCode()}{settingServerInviteCode()}}
+{\footnotesize\ttfamily void setting\+Server\+Invite\+Code (\begin{DoxyParamCaption}\item[{string}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Trata o comando de definição do código de convite do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em parameter} & A string de parâmetro contendo o nome do servidor e o código de convite. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a5ece2743fd4d75edf98346f47cd34b80}\label{main_8cpp_a5ece2743fd4d75edf98346f47cd34b80}} 
+\index{main.cpp@{main.cpp}!signup@{signup}}
+\index{signup@{signup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{signup()}{signup()}}
+{\footnotesize\ttfamily void signup (\begin{DoxyParamCaption}\item[{string}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Trata o comando de cadastro de usuário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em parameter} & A string de parâmetro contendo e-\/mail, senha e nome. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{main_8cpp_a5ece2743fd4d75edf98346f47cd34b80_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_aad322dd5d64050ad75d6cb3e5d884f2d}\label{main_8cpp_aad322dd5d64050ad75d6cb3e5d884f2d}} 
+\index{main.cpp@{main.cpp}!splitting@{splitting}}
+\index{splitting@{splitting}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{splitting()}{splitting()}}
+{\footnotesize\ttfamily string splitting (\begin{DoxyParamCaption}\item[{string}]{line,  }\item[{bool}]{isthefirst }\end{DoxyParamCaption})}
+
+
+
+Divide uma string em duas partes no primeiro espaço encontrado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em line} & A string de entrada a ser dividida. \\
+\hline
+{\em isthefirst} & Flag indicando se deve retornar a primeira parte (verdadeiro) ou a segunda parte (falso). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A primeira ou segunda parte da string dividida. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_aad322dd5d64050ad75d6cb3e5d884f2d_icgraph}
+\end{center}
+\end{figure}

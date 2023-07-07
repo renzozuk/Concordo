@@ -1,0 +1,419 @@
+\hypertarget{classServer}{}\doxysection{Referência da Classe Server}
+\label{classServer}\index{Server@{Server}}
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+
+
+Diagrama de colaboração para Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classServer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServer_ad5ec9462b520e59f7ea831e157ee5e59}{Server}} ()
+\item 
+\mbox{\hyperlink{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server}} ()
+\item 
+void \mbox{\hyperlink{classServer_aa1a3b8f4dd1fbfc1657bfc53b44a689c}{Channels\+Destroyer}} ()
+\item 
+\mbox{\hyperlink{classServer_a028990d1cdfd2a8eb64d79296f23572b}{Server}} (int o, const string \&n)
+\item 
+int \mbox{\hyperlink{classServer_a7da05d342b72f4f6141e7fdc6b894d1d}{get\+Owner\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ID do proprietário do servidor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classServer_ab3e5ca3979006745dfd8f1ec4c06c885}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do servidor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classServer_a4081a3f2bad8aa7738614d46a1ddb1a3}{get\+Invite\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o código de convite do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_aa4431a1c517c4d4473ab261fb2d66a3d}{set\+Description}} (string)
+\begin{DoxyCompactList}\small\item\em Define a descrição do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a20828ef03a381e0063b6a1a77fa22370}{set\+Invite\+Code}} (string)
+\begin{DoxyCompactList}\small\item\em Define o código de convite do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_ab3c0a1babbb5e22438d6b2e33c1ddb50}{entering\+Server}} (int)
+\begin{DoxyCompactList}\small\item\em Adiciona um usuário ao servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServer_a76c6eb357d86b60d32031ab3ded63d93}{get\+Quant\+Members}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de membros no servidor. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{classServer_ad428d60ebab537ad7440d75038948e98}{get\+List\+Members}} ()
+\begin{DoxyCompactList}\small\item\em Obtém uma lista de ID dos membros do servidor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServer_a364fc998bc3d5da97738675d8712bb76}{al\+Exist\+Channel}} (string)
+\item 
+void \mbox{\hyperlink{classServer_a295189591ec882e9ed960eb53a27895b}{add\+Channel\+To\+Server}} (string, bool)
+\item 
+void \mbox{\hyperlink{classServer_aba4a136c912f68b9ca2305c85a629db2}{print\+Channels}} ()
+\item 
+\mbox{\hyperlink{classChannel}{Channel}} \mbox{\hyperlink{classServer_a96d2d37f6a044d111e23d29af6563dad}{get\+Channel}} (string)
+\item 
+void \mbox{\hyperlink{classServer_a026ac8d8da68504cd5462b147461ac76}{sending\+Message}} (string, int, string, string)
+\item 
+int \mbox{\hyperlink{classServer_a34d7d4010c176e845cbb467e5405563c}{get\+Quant\+Messages}} (string)
+\item 
+int \mbox{\hyperlink{classServer_af426e116ea60009fd14d9405624f199e}{get\+Specific\+Message\+Sent\+By}} (string, int)
+\item 
+string \mbox{\hyperlink{classServer_a8efa34013455595907083295eeaf7303}{get\+Specific\+Message\+Date\+Time}} (string, int)
+\item 
+string \mbox{\hyperlink{classServer_a914104a2a50ac1c9895d139766a3c4d3}{get\+Specific\+Message\+Content}} (string, int)
+\item 
+int \mbox{\hyperlink{classServer_a0507cc7a7938dc794c08b3a0b35937bb}{get\+Last\+Message\+Sent\+By}} (string)
+\item 
+string \mbox{\hyperlink{classServer_ade939cedf571567dbbbfcbb53783e570}{get\+Last\+Message\+Date\+Time}} (string)
+\item 
+string \mbox{\hyperlink{classServer_ac7d2a46d716ba8cdb461bfe126b5ce24}{get\+Last\+Message\+Content}} (string)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classServer_ad5ec9462b520e59f7ea831e157ee5e59}\label{classServer_ad5ec9462b520e59f7ea831e157ee5e59}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}\label{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}} 
+\index{Server@{Server}!````~Server@{$\sim$Server}}
+\index{````~Server@{$\sim$Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{$\sim$Server()}{~Server()}}
+{\footnotesize\ttfamily Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classServer_a028990d1cdfd2a8eb64d79296f23572b}\label{classServer_a028990d1cdfd2a8eb64d79296f23572b}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{int}]{o,  }\item[{const string \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classServer_a295189591ec882e9ed960eb53a27895b}\label{classServer_a295189591ec882e9ed960eb53a27895b}} 
+\index{Server@{Server}!addChannelToServer@{addChannelToServer}}
+\index{addChannelToServer@{addChannelToServer}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{addChannelToServer()}{addChannelToServer()}}
+{\footnotesize\ttfamily void Server\+::add\+Channel\+To\+Server (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{bool}]{is\+Text }\end{DoxyParamCaption})}
+
+Adiciona um novo canal ao servidor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do canal a ser adicionado. \\
+\hline
+{\em is\+Text} & Um valor booleano indicando se o canal é de texto. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServer_a295189591ec882e9ed960eb53a27895b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classServer_a364fc998bc3d5da97738675d8712bb76}\label{classServer_a364fc998bc3d5da97738675d8712bb76}} 
+\index{Server@{Server}!alExistChannel@{alExistChannel}}
+\index{alExistChannel@{alExistChannel}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{alExistChannel()}{alExistChannel()}}
+{\footnotesize\ttfamily bool Server\+::al\+Exist\+Channel (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Verifica se um canal com o nome especificado já existe no servidor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do canal a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o canal existe, false caso contrário. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServer_a364fc998bc3d5da97738675d8712bb76_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classServer_aa1a3b8f4dd1fbfc1657bfc53b44a689c}\label{classServer_aa1a3b8f4dd1fbfc1657bfc53b44a689c}} 
+\index{Server@{Server}!ChannelsDestroyer@{ChannelsDestroyer}}
+\index{ChannelsDestroyer@{ChannelsDestroyer}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{ChannelsDestroyer()}{ChannelsDestroyer()}}
+{\footnotesize\ttfamily void Server\+::\+Channels\+Destroyer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classServer_ab3c0a1babbb5e22438d6b2e33c1ddb50}\label{classServer_ab3c0a1babbb5e22438d6b2e33c1ddb50}} 
+\index{Server@{Server}!enteringServer@{enteringServer}}
+\index{enteringServer@{enteringServer}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{enteringServer()}{enteringServer()}}
+{\footnotesize\ttfamily void Server\+::entering\+Server (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Adiciona um usuário ao servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O ID do usuário a ser adicionado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_a96d2d37f6a044d111e23d29af6563dad}\label{classServer_a96d2d37f6a044d111e23d29af6563dad}} 
+\index{Server@{Server}!getChannel@{getChannel}}
+\index{getChannel@{getChannel}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getChannel()}{getChannel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChannel}{Channel}} Server\+::get\+Channel (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Obtém um canal específico do servidor com base no nome. 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do canal a ser obtido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O canal correspondente, ou um canal vazio se não for encontrado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_a4081a3f2bad8aa7738614d46a1ddb1a3}\label{classServer_a4081a3f2bad8aa7738614d46a1ddb1a3}} 
+\index{Server@{Server}!getInviteCode@{getInviteCode}}
+\index{getInviteCode@{getInviteCode}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getInviteCode()}{getInviteCode()}}
+{\footnotesize\ttfamily string Server\+::get\+Invite\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o código de convite do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+O código de convite do servidor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_ac7d2a46d716ba8cdb461bfe126b5ce24}\label{classServer_ac7d2a46d716ba8cdb461bfe126b5ce24}} 
+\index{Server@{Server}!getLastMessageContent@{getLastMessageContent}}
+\index{getLastMessageContent@{getLastMessageContent}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getLastMessageContent()}{getLastMessageContent()}}
+{\footnotesize\ttfamily string Server\+::get\+Last\+Message\+Content (\begin{DoxyParamCaption}\item[{string}]{current\+Channel\+Name }\end{DoxyParamCaption})}
+
+Obtém o conteúdo da última mensagem enviada ao canal atual. 
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel\+Name} & O nome docanal atual. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O conteúdo da última mensagem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_ade939cedf571567dbbbfcbb53783e570}\label{classServer_ade939cedf571567dbbbfcbb53783e570}} 
+\index{Server@{Server}!getLastMessageDateTime@{getLastMessageDateTime}}
+\index{getLastMessageDateTime@{getLastMessageDateTime}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getLastMessageDateTime()}{getLastMessageDateTime()}}
+{\footnotesize\ttfamily string Server\+::get\+Last\+Message\+Date\+Time (\begin{DoxyParamCaption}\item[{string}]{current\+Channel\+Name }\end{DoxyParamCaption})}
+
+Obtém a data e hora da última mensagem enviada ao canal atual. 
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel\+Name} & O nome do canal atual. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A data e hora da última mensagem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_a0507cc7a7938dc794c08b3a0b35937bb}\label{classServer_a0507cc7a7938dc794c08b3a0b35937bb}} 
+\index{Server@{Server}!getLastMessageSentBy@{getLastMessageSentBy}}
+\index{getLastMessageSentBy@{getLastMessageSentBy}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getLastMessageSentBy()}{getLastMessageSentBy()}}
+{\footnotesize\ttfamily int Server\+::get\+Last\+Message\+Sent\+By (\begin{DoxyParamCaption}\item[{string}]{current\+Channel\+Name }\end{DoxyParamCaption})}
+
+Obtém o remetente da última mensagem enviada ao canal atual. 
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel\+Name} & O nome do canal atual. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O remetente da última mensagem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_ad428d60ebab537ad7440d75038948e98}\label{classServer_ad428d60ebab537ad7440d75038948e98}} 
+\index{Server@{Server}!getListMembers@{getListMembers}}
+\index{getListMembers@{getListMembers}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getListMembers()}{getListMembers()}}
+{\footnotesize\ttfamily int $\ast$ Server\+::get\+List\+Members (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém uma lista de ID dos membros do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+Um ponteiro para um array de inteiros contendo os I\+Ds dos membros. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServer_ad428d60ebab537ad7440d75038948e98_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classServer_ab3e5ca3979006745dfd8f1ec4c06c885}\label{classServer_ab3e5ca3979006745dfd8f1ec4c06c885}} 
+\index{Server@{Server}!getName@{getName}}
+\index{getName@{getName}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Server\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+O nome do servidor. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServer_ab3e5ca3979006745dfd8f1ec4c06c885_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classServer_a7da05d342b72f4f6141e7fdc6b894d1d}\label{classServer_a7da05d342b72f4f6141e7fdc6b894d1d}} 
+\index{Server@{Server}!getOwnerId@{getOwnerId}}
+\index{getOwnerId@{getOwnerId}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getOwnerId()}{getOwnerId()}}
+{\footnotesize\ttfamily int Server\+::get\+Owner\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o ID do proprietário do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+O ID do proprietário do servidor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_a76c6eb357d86b60d32031ab3ded63d93}\label{classServer_a76c6eb357d86b60d32031ab3ded63d93}} 
+\index{Server@{Server}!getQuantMembers@{getQuantMembers}}
+\index{getQuantMembers@{getQuantMembers}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getQuantMembers()}{getQuantMembers()}}
+{\footnotesize\ttfamily int Server\+::get\+Quant\+Members (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a quantidade de membros no servidor. 
+
+\begin{DoxyReturn}{Retorna}
+A quantidade de membros no servidor. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServer_a76c6eb357d86b60d32031ab3ded63d93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classServer_a34d7d4010c176e845cbb467e5405563c}\label{classServer_a34d7d4010c176e845cbb467e5405563c}} 
+\index{Server@{Server}!getQuantMessages@{getQuantMessages}}
+\index{getQuantMessages@{getQuantMessages}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getQuantMessages()}{getQuantMessages()}}
+{\footnotesize\ttfamily int Server\+::get\+Quant\+Messages (\begin{DoxyParamCaption}\item[{string}]{current\+Channel\+Name }\end{DoxyParamCaption})}
+
+Obtém a quantidade de mensagens no canal atual especificado. 
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel\+Name} & O nome do canal atual. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A quantidade de mensagens no canal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_a914104a2a50ac1c9895d139766a3c4d3}\label{classServer_a914104a2a50ac1c9895d139766a3c4d3}} 
+\index{Server@{Server}!getSpecificMessageContent@{getSpecificMessageContent}}
+\index{getSpecificMessageContent@{getSpecificMessageContent}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getSpecificMessageContent()}{getSpecificMessageContent()}}
+{\footnotesize\ttfamily string Server\+::get\+Specific\+Message\+Content (\begin{DoxyParamCaption}\item[{string}]{current\+Channel\+Name,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+Obtém o conteúdo de uma mensagem específica no canal atual. 
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel\+Name} & O nome do canal atual. \\
+\hline
+{\em position} & A posição da mensagem na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O conteúdo da mensagem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_a8efa34013455595907083295eeaf7303}\label{classServer_a8efa34013455595907083295eeaf7303}} 
+\index{Server@{Server}!getSpecificMessageDateTime@{getSpecificMessageDateTime}}
+\index{getSpecificMessageDateTime@{getSpecificMessageDateTime}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getSpecificMessageDateTime()}{getSpecificMessageDateTime()}}
+{\footnotesize\ttfamily string Server\+::get\+Specific\+Message\+Date\+Time (\begin{DoxyParamCaption}\item[{string}]{current\+Channel\+Name,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+Obtém a data e hora de uma mensagem específica no canal atual. 
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel\+Name} & O nome do canal atual. \\
+\hline
+{\em position} & A posição da mensagem na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A data e hora da mensagem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_af426e116ea60009fd14d9405624f199e}\label{classServer_af426e116ea60009fd14d9405624f199e}} 
+\index{Server@{Server}!getSpecificMessageSentBy@{getSpecificMessageSentBy}}
+\index{getSpecificMessageSentBy@{getSpecificMessageSentBy}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{getSpecificMessageSentBy()}{getSpecificMessageSentBy()}}
+{\footnotesize\ttfamily int Server\+::get\+Specific\+Message\+Sent\+By (\begin{DoxyParamCaption}\item[{string}]{current\+Channel\+Name,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+Obtém o remetente de uma mensagem específica no canal atual. 
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel\+Name} & O nome do canal atual. \\
+\hline
+{\em position} & A posição da mensagem na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O remetente da mensagem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_aba4a136c912f68b9ca2305c85a629db2}\label{classServer_aba4a136c912f68b9ca2305c85a629db2}} 
+\index{Server@{Server}!printChannels@{printChannels}}
+\index{printChannels@{printChannels}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{printChannels()}{printChannels()}}
+{\footnotesize\ttfamily void Server\+::print\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Imprime os canais do servidor. \mbox{\Hypertarget{classServer_a026ac8d8da68504cd5462b147461ac76}\label{classServer_a026ac8d8da68504cd5462b147461ac76}} 
+\index{Server@{Server}!sendingMessage@{sendingMessage}}
+\index{sendingMessage@{sendingMessage}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{sendingMessage()}{sendingMessage()}}
+{\footnotesize\ttfamily void Server\+::sending\+Message (\begin{DoxyParamCaption}\item[{string}]{date,  }\item[{int}]{sent\+By,  }\item[{string}]{content,  }\item[{string}]{current\+Channel\+Name }\end{DoxyParamCaption})}
+
+Envia uma mensagem para o canal atual especificado. 
+\begin{DoxyParams}{Parâmetros}
+{\em date} & A data da mensagem. \\
+\hline
+{\em sent\+By} & O remetente da mensagem. \\
+\hline
+{\em content} & O conteúdo da mensagem. \\
+\hline
+{\em current\+Channel\+Name} & O nome do canal atual. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_aa4431a1c517c4d4473ab261fb2d66a3d}\label{classServer_aa4431a1c517c4d4473ab261fb2d66a3d}} 
+\index{Server@{Server}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily void Server\+::set\+Description (\begin{DoxyParamCaption}\item[{string}]{description }\end{DoxyParamCaption})}
+
+
+
+Define a descrição do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em description} & A descrição do servidor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_a20828ef03a381e0063b6a1a77fa22370}\label{classServer_a20828ef03a381e0063b6a1a77fa22370}} 
+\index{Server@{Server}!setInviteCode@{setInviteCode}}
+\index{setInviteCode@{setInviteCode}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{setInviteCode()}{setInviteCode()}}
+{\footnotesize\ttfamily void Server\+::set\+Invite\+Code (\begin{DoxyParamCaption}\item[{string}]{invitecode }\end{DoxyParamCaption})}
+
+
+
+Define o código de convite do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em invitecode} & O código de convite do servidor. \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{server_8h}{server.\+h}}\item 
+src/\mbox{\hyperlink{server_8cpp}{server.\+cpp}}\end{DoxyCompactItemize}

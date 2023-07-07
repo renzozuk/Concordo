@@ -1,0 +1,4 @@
+<map id="Server::getListMembers" name="Server::getListMembers">
+<area shape="rect" id="node1" title="Obtém uma lista de ID dos membros do servidor." alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node2" href="$classServer.html#a76c6eb357d86b60d32031ab3ded63d93" title="Obtém a quantidade de membros no servidor." alt="" coords="231,5,424,32"/>
+</map>

@@ -1,0 +1,47 @@
+#ifndef SERVER_H
+#define SERVER_H
+
+#include <string>
+#include <vector>
+#include <textchannel.h>
+#include <voicechannel.h>
+
+using std::string;
+using std::vector;
+
+class Server{
+private:
+    int ownerid;
+    string name, description, invitecode;
+    vector<int> membersid;
+    vector<Channel*> channels;
+public:
+    Server() {}
+    ~Server() {}
+    void ChannelsDestroyer();
+    Server(int o, const string& n) : ownerid(o), name(n) {};
+    int getOwnerId();
+    string getName();
+    string getInviteCode();
+    void setDescription(string);
+    void setInviteCode(string);
+    void enteringServer(int);
+    int getQuantMembers();
+    int* getListMembers();
+    //start channels//
+    bool alExistChannel(string);
+    void addChannelToServer(string, bool);
+    void printChannels();
+    Channel getChannel(string);
+    void sendingMessage(string, int, string, string);
+    int getQuantMessages(string);
+    int getSpecificMessageSentBy(string, int);
+    string getSpecificMessageDateTime(string, int);
+    string getSpecificMessageContent(string, int);
+    int getLastMessageSentBy(string);
+    string getLastMessageDateTime(string);
+    string getLastMessageContent(string);
+    //end channels//
+};
+
+#endif

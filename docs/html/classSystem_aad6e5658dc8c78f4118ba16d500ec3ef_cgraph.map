@@ -1,0 +1,7 @@
+<map id="System::addServerToSystem" name="System::addServerToSystem">
+<area shape="rect" id="node1" title="Adiciona um servidor ao sistema." alt="" coords="5,56,213,83"/>
+<area shape="rect" id="node2" href="$classSystem.html#a60259544cd26e1c21db54dd02efdcf7d" title="Verifica se já existe um servidor com o mesmo nome no sistema." alt="" coords="266,5,431,32"/>
+<area shape="rect" id="node3" href="$classSystem.html#a91eb3a9c2a7515774393b018e77e6d55" title="Realiza a entrada de um usuário em um servidor." alt="" coords="261,107,436,133"/>
+<area shape="rect" id="node4" href="$classUser.html#a010077fcd52d32fd3b4e1171f748a86a" title="Obtém o ID do usuário." alt="" coords="532,56,625,83"/>
+<area shape="rect" id="node5" href="$classSystem.html#ad1de91e5ec17795f2994de4ee0635bc1" title="Define o servidor atualmente selecionado." alt="" coords="484,107,673,133"/>
+</map>

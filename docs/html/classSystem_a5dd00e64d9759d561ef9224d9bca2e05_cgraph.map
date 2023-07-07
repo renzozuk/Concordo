@@ -1,0 +1,4 @@
+<map id="System::setServerInviteCode" name="System::setServerInviteCode">
+<area shape="rect" id="node1" title="Define o código de convite de um servidor." alt="" coords="5,5,216,32"/>
+<area shape="rect" id="node2" href="$classUser.html#a010077fcd52d32fd3b4e1171f748a86a" title="Obtém o ID do usuário." alt="" coords="264,5,357,32"/>
+</map>

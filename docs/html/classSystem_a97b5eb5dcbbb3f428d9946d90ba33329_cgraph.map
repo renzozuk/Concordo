@@ -1,0 +1,6 @@
+<map id="System::sendingMessage" name="System::sendingMessage">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,193,83"/>
+<area shape="rect" id="node2" href="$classUser.html#a010077fcd52d32fd3b4e1171f748a86a" title="Obtém o ID do usuário." alt="" coords="266,5,359,32"/>
+<area shape="rect" id="node3" href="$classChannel.html#a53361b01056aea15c93053feb470b715" title=" " alt="" coords="241,56,384,83"/>
+<area shape="rect" id="node4" href="$classServer.html#ab3e5ca3979006745dfd8f1ec4c06c885" title="Obtém o nome do servidor." alt="" coords="247,107,379,133"/>
+</map>

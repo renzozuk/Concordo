@@ -1,0 +1,10 @@
+<map id="User::getId" name="User::getId">
+<area shape="rect" id="node1" title="Obtém o ID do usuário." alt="" coords="524,146,617,173"/>
+<area shape="rect" id="node2" href="$classSystem.html#aad6e5658dc8c78f4118ba16d500ec3ef" title="Adiciona um servidor ao sistema." alt="" coords="5,45,213,71"/>
+<area shape="rect" id="node3" href="$classSystem.html#a66379777d789c071beb96b3b0253f212" title="Desconecta o usuário atualmente logado no sistema." alt="" coords="294,45,443,71"/>
+<area shape="rect" id="node4" href="$classSystem.html#a91eb3a9c2a7515774393b018e77e6d55" title="Realiza a entrada de um usuário em um servidor." alt="" coords="281,95,456,122"/>
+<area shape="rect" id="node5" href="$classSystem.html#ad1398f50c21ef7912b0b73fc51da90f4" title="Remove um servidor do sistema." alt="" coords="283,146,454,173"/>
+<area shape="rect" id="node6" href="$classSystem.html#a97b5eb5dcbbb3f428d9946d90ba33329" title=" " alt="" coords="275,197,463,223"/>
+<area shape="rect" id="node7" href="$classSystem.html#a77590a4780762bd95b1bf1796a656f39" title="Define a descrição de um servidor." alt="" coords="261,247,476,274"/>
+<area shape="rect" id="node8" href="$classSystem.html#a5dd00e64d9759d561ef9224d9bca2e05" title="Define o código de convite de um servidor." alt="" coords="263,298,474,325"/>
+</map>

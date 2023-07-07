@@ -1,0 +1,13 @@
+<map id="include/message.h" name="include/message.h">
+<area shape="rect" id="node1" title=" " alt="" coords="169,5,313,32"/>
+<area shape="rect" id="node2" href="$message_8cpp.html" title="Implementação da classe Message." alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node3" href="$textchannel_8h.html" title=" " alt="" coords="160,80,323,107"/>
+<area shape="rect" id="node10" href="$voicechannel_8h.html" title=" " alt="" coords="347,80,517,107"/>
+<area shape="rect" id="node4" href="$textchannel_8cpp.html" title="Implementação da classe TextChannel." alt="" coords="97,155,247,181"/>
+<area shape="rect" id="node5" href="$server_8h.html" title=" " alt="" coords="271,155,396,181"/>
+<area shape="rect" id="node6" href="$server_8cpp.html" title="Implementação da classe Server." alt="" coords="204,229,316,256"/>
+<area shape="rect" id="node7" href="$system_8h.html" title=" " alt="" coords="340,229,473,256"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title="Implementação da leitura do script e dos comandos a serem executados pelo usuário." alt="" coords="285,304,390,331"/>
+<area shape="rect" id="node9" href="$system_8cpp.html" title="Implementação da classe System." alt="" coords="415,304,535,331"/>
+<area shape="rect" id="node11" href="$voicechannel_8cpp.html" title="Implementação da classe VoiceChannel." alt="" coords="421,155,579,181"/>
+</map>

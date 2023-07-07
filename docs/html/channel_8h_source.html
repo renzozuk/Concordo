@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/channel.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">V2.0</span>
+   </div>
+   <div id="projectbrief">Neste projeto temos a implementação de um sistema chamado Concordo com recursos similares ao Discord.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">channel.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="channel_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CHANNEL_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CHANNEL_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classChannel.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classChannel.html">Channel</a>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classChannel.html#a4ff8226abc544520dd121d9141cef953">   11</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>, <a class="code" href="classChannel.html#a4ff8226abc544520dd121d9141cef953">type</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//the string type is an auxiliary temporary string, that string will be removed and the methods will be improved soon</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">   14</a></span>&#160;    <a class="code" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel</a>() {}</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">   15</a></span>&#160;    <a class="code" href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">~Channel</a>() {}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>);    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#a53361b01056aea15c93053feb470b715">getName</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#afa00934e2d4d1f3e15f6f984b941fcc3">getType</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classChannel.html#a558006c6a06fd844e2d59c7361709c48">   19</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classChannel.html#a558006c6a06fd844e2d59c7361709c48">addMessageToChannel</a>(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">string</span>) {}</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classChannel.html#abd7463706b67c5e5fbef3cdbee22ca6f">   20</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classChannel.html#abd7463706b67c5e5fbef3cdbee22ca6f">getQuantMessages</a>() {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classChannel.html#a065dfc94af6d6ede49a9ffcb698f75d6">   21</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classChannel.html#a065dfc94af6d6ede49a9ffcb698f75d6">getSentByElement</a>(<span class="keywordtype">int</span>) {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classChannel.html#a56ff43d9dd1da736375c008c16f8a14c">   22</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classChannel.html#a56ff43d9dd1da736375c008c16f8a14c">getDateTimeElement</a>(<span class="keywordtype">int</span>) {}</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classChannel.html#a15df60e72ff094c69edce2365b8191ec">   23</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classChannel.html#a15df60e72ff094c69edce2365b8191ec">getContentElement</a>(<span class="keywordtype">int</span>) {}</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classChannel.html#a6a8026cc73ccd5fbada8fb9e14c5cfe6">   24</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classChannel.html#a6a8026cc73ccd5fbada8fb9e14c5cfe6">setLastMessage</a>(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">string</span>) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classChannel.html#a58d17edd3931a106c5e5178d18376b33">   25</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classChannel.html#a58d17edd3931a106c5e5178d18376b33">getSentBy</a>() {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classChannel.html#aa3a616c9fdd4b64061395ed6df282dda">   26</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classChannel.html#aa3a616c9fdd4b64061395ed6df282dda">getDateTime</a>() {}</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classChannel.html#aa02beb03719cc63c5985c4b2399362de">   27</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classChannel.html#aa02beb03719cc63c5985c4b2399362de">getContent</a>() {}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassChannel_html_afa00934e2d4d1f3e15f6f984b941fcc3"><div class="ttname"><a href="classChannel.html#afa00934e2d4d1f3e15f6f984b941fcc3">Channel::getType</a></div><div class="ttdeci">string getType()</div><div class="ttdef"><b>Definition:</b> channel.cpp:36</div></div>
+<div class="ttc" id="aclassChannel_html_a065dfc94af6d6ede49a9ffcb698f75d6"><div class="ttname"><a href="classChannel.html#a065dfc94af6d6ede49a9ffcb698f75d6">Channel::getSentByElement</a></div><div class="ttdeci">virtual int getSentByElement(int)</div><div class="ttdef"><b>Definition:</b> channel.h:21</div></div>
+<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdef"><b>Definition:</b> channel.h:9</div></div>
+<div class="ttc" id="aclassChannel_html_a15df60e72ff094c69edce2365b8191ec"><div class="ttname"><a href="classChannel.html#a15df60e72ff094c69edce2365b8191ec">Channel::getContentElement</a></div><div class="ttdeci">virtual string getContentElement(int)</div><div class="ttdef"><b>Definition:</b> channel.h:23</div></div>
+<div class="ttc" id="aclassChannel_html_a4ff8226abc544520dd121d9141cef953"><div class="ttname"><a href="classChannel.html#a4ff8226abc544520dd121d9141cef953">Channel::type</a></div><div class="ttdeci">string type</div><div class="ttdef"><b>Definition:</b> channel.h:11</div></div>
+<div class="ttc" id="aclassChannel_html_a558006c6a06fd844e2d59c7361709c48"><div class="ttname"><a href="classChannel.html#a558006c6a06fd844e2d59c7361709c48">Channel::addMessageToChannel</a></div><div class="ttdeci">virtual void addMessageToChannel(string, int, string)</div><div class="ttdef"><b>Definition:</b> channel.h:19</div></div>
+<div class="ttc" id="aclassChannel_html_aa02beb03719cc63c5985c4b2399362de"><div class="ttname"><a href="classChannel.html#aa02beb03719cc63c5985c4b2399362de">Channel::getContent</a></div><div class="ttdeci">virtual string getContent()</div><div class="ttdef"><b>Definition:</b> channel.h:27</div></div>
+<div class="ttc" id="aclassChannel_html_af2b4b16288cbb2c592b1e0f6486c2430"><div class="ttname"><a href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel::Channel</a></div><div class="ttdeci">Channel()</div><div class="ttdef"><b>Definition:</b> channel.h:14</div></div>
+<div class="ttc" id="aclassChannel_html_abd7463706b67c5e5fbef3cdbee22ca6f"><div class="ttname"><a href="classChannel.html#abd7463706b67c5e5fbef3cdbee22ca6f">Channel::getQuantMessages</a></div><div class="ttdeci">virtual int getQuantMessages()</div><div class="ttdef"><b>Definition:</b> channel.h:20</div></div>
+<div class="ttc" id="aclassChannel_html_ada27be4a604630621c5de998c7f4a418"><div class="ttname"><a href="classChannel.html#ada27be4a604630621c5de998c7f4a418">Channel::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> channel.h:11</div></div>
+<div class="ttc" id="aclassChannel_html_a53361b01056aea15c93053feb470b715"><div class="ttname"><a href="classChannel.html#a53361b01056aea15c93053feb470b715">Channel::getName</a></div><div class="ttdeci">string getName()</div><div class="ttdef"><b>Definition:</b> channel.cpp:28</div></div>
+<div class="ttc" id="aclassChannel_html_a56ff43d9dd1da736375c008c16f8a14c"><div class="ttname"><a href="classChannel.html#a56ff43d9dd1da736375c008c16f8a14c">Channel::getDateTimeElement</a></div><div class="ttdeci">virtual string getDateTimeElement(int)</div><div class="ttdef"><b>Definition:</b> channel.h:22</div></div>
+<div class="ttc" id="aclassChannel_html_a6a8026cc73ccd5fbada8fb9e14c5cfe6"><div class="ttname"><a href="classChannel.html#a6a8026cc73ccd5fbada8fb9e14c5cfe6">Channel::setLastMessage</a></div><div class="ttdeci">virtual void setLastMessage(string, int, string)</div><div class="ttdef"><b>Definition:</b> channel.h:24</div></div>
+<div class="ttc" id="aclassChannel_html_aa3a616c9fdd4b64061395ed6df282dda"><div class="ttname"><a href="classChannel.html#aa3a616c9fdd4b64061395ed6df282dda">Channel::getDateTime</a></div><div class="ttdeci">virtual string getDateTime()</div><div class="ttdef"><b>Definition:</b> channel.h:26</div></div>
+<div class="ttc" id="aclassChannel_html_a5f15ebd302464069f1a9e3f0ded14482"><div class="ttname"><a href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">Channel::~Channel</a></div><div class="ttdeci">~Channel()</div><div class="ttdef"><b>Definition:</b> channel.h:15</div></div>
+<div class="ttc" id="aclassChannel_html_a58d17edd3931a106c5e5178d18376b33"><div class="ttname"><a href="classChannel.html#a58d17edd3931a106c5e5178d18376b33">Channel::getSentBy</a></div><div class="ttdeci">virtual int getSentBy()</div><div class="ttdef"><b>Definition:</b> channel.h:25</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

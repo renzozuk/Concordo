@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/server.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">V2.0</span>
+   </div>
+   <div id="projectbrief">Neste projeto temos a implementação de um sistema chamado Concordo com recursos similares ao Discord.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">server.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="server_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SERVER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SERVER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="textchannel_8h.html">textchannel.h</a>&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="voicechannel_8h.html">voicechannel.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classServer.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServer.html">Server</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> ownerid;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">string</span> name, description, invitecode;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    vector&lt;int&gt; membersid;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    vector&lt;Channel*&gt; channels;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classServer.html#ad5ec9462b520e59f7ea831e157ee5e59">   19</a></span>&#160;    <a class="code" href="classServer.html#ad5ec9462b520e59f7ea831e157ee5e59">Server</a>() {}</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classServer.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">   20</a></span>&#160;    <a class="code" href="classServer.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">~Server</a>() {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#aa1a3b8f4dd1fbfc1657bfc53b44a689c">ChannelsDestroyer</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classServer.html#a028990d1cdfd2a8eb64d79296f23572b">   22</a></span>&#160;    <a class="code" href="classServer.html#a028990d1cdfd2a8eb64d79296f23572b">Server</a>(<span class="keywordtype">int</span> o, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; n) : ownerid(o), name(n) {};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classServer.html#a7da05d342b72f4f6141e7fdc6b894d1d">getOwnerId</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classServer.html#ab3e5ca3979006745dfd8f1ec4c06c885">getName</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classServer.html#a4081a3f2bad8aa7738614d46a1ddb1a3">getInviteCode</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#aa4431a1c517c4d4473ab261fb2d66a3d">setDescription</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#a20828ef03a381e0063b6a1a77fa22370">setInviteCode</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#ab3c0a1babbb5e22438d6b2e33c1ddb50">enteringServer</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classServer.html#a76c6eb357d86b60d32031ab3ded63d93">getQuantMembers</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span>* <a class="code" href="classServer.html#ad428d60ebab537ad7440d75038948e98">getListMembers</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//start channels//</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classServer.html#a364fc998bc3d5da97738675d8712bb76">alExistChannel</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#a295189591ec882e9ed960eb53a27895b">addChannelToServer</a>(<span class="keywordtype">string</span>, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#aba4a136c912f68b9ca2305c85a629db2">printChannels</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classChannel.html">Channel</a> <a class="code" href="classServer.html#a96d2d37f6a044d111e23d29af6563dad">getChannel</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#a026ac8d8da68504cd5462b147461ac76">sendingMessage</a>(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classServer.html#a34d7d4010c176e845cbb467e5405563c">getQuantMessages</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classServer.html#af426e116ea60009fd14d9405624f199e">getSpecificMessageSentBy</a>(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classServer.html#a8efa34013455595907083295eeaf7303">getSpecificMessageDateTime</a>(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classServer.html#a914104a2a50ac1c9895d139766a3c4d3">getSpecificMessageContent</a>(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classServer.html#a0507cc7a7938dc794c08b3a0b35937bb">getLastMessageSentBy</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classServer.html#ade939cedf571567dbbbfcbb53783e570">getLastMessageDateTime</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classServer.html#ac7d2a46d716ba8cdb461bfe126b5ce24">getLastMessageContent</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//end channels//</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdef"><b>Definition:</b> channel.h:9</div></div>
+<div class="ttc" id="aclassServer_html_a8efa34013455595907083295eeaf7303"><div class="ttname"><a href="classServer.html#a8efa34013455595907083295eeaf7303">Server::getSpecificMessageDateTime</a></div><div class="ttdeci">string getSpecificMessageDateTime(string, int)</div><div class="ttdef"><b>Definition:</b> server.cpp:221</div></div>
+<div class="ttc" id="atextchannel_8h_html"><div class="ttname"><a href="textchannel_8h.html">textchannel.h</a></div></div>
+<div class="ttc" id="aclassServer_html_a7da05d342b72f4f6141e7fdc6b894d1d"><div class="ttname"><a href="classServer.html#a7da05d342b72f4f6141e7fdc6b894d1d">Server::getOwnerId</a></div><div class="ttdeci">int getOwnerId()</div><div class="ttdoc">Obtém o ID do proprietário do servidor.</div><div class="ttdef"><b>Definition:</b> server.cpp:27</div></div>
+<div class="ttc" id="aclassServer_html_a4b3aa2579cb1c8cd1d069582c14d0fa6"><div class="ttname"><a href="classServer.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">Server::~Server</a></div><div class="ttdeci">~Server()</div><div class="ttdef"><b>Definition:</b> server.h:20</div></div>
+<div class="ttc" id="aclassServer_html_a4081a3f2bad8aa7738614d46a1ddb1a3"><div class="ttname"><a href="classServer.html#a4081a3f2bad8aa7738614d46a1ddb1a3">Server::getInviteCode</a></div><div class="ttdeci">string getInviteCode()</div><div class="ttdoc">Obtém o código de convite do servidor.</div><div class="ttdef"><b>Definition:</b> server.cpp:43</div></div>
+<div class="ttc" id="aclassServer_html_ad428d60ebab537ad7440d75038948e98"><div class="ttname"><a href="classServer.html#ad428d60ebab537ad7440d75038948e98">Server::getListMembers</a></div><div class="ttdeci">int * getListMembers()</div><div class="ttdoc">Obtém uma lista de ID dos membros do servidor.</div><div class="ttdef"><b>Definition:</b> server.cpp:91</div></div>
+<div class="ttc" id="aclassServer_html_a0507cc7a7938dc794c08b3a0b35937bb"><div class="ttname"><a href="classServer.html#a0507cc7a7938dc794c08b3a0b35937bb">Server::getLastMessageSentBy</a></div><div class="ttdeci">int getLastMessageSentBy(string)</div><div class="ttdef"><b>Definition:</b> server.cpp:248</div></div>
+<div class="ttc" id="aclassServer_html_a028990d1cdfd2a8eb64d79296f23572b"><div class="ttname"><a href="classServer.html#a028990d1cdfd2a8eb64d79296f23572b">Server::Server</a></div><div class="ttdeci">Server(int o, const string &amp;n)</div><div class="ttdef"><b>Definition:</b> server.h:22</div></div>
+<div class="ttc" id="aclassServer_html_a96d2d37f6a044d111e23d29af6563dad"><div class="ttname"><a href="classServer.html#a96d2d37f6a044d111e23d29af6563dad">Server::getChannel</a></div><div class="ttdeci">Channel getChannel(string)</div><div class="ttdef"><b>Definition:</b> server.cpp:162</div></div>
+<div class="ttc" id="aclassServer_html_af426e116ea60009fd14d9405624f199e"><div class="ttname"><a href="classServer.html#af426e116ea60009fd14d9405624f199e">Server::getSpecificMessageSentBy</a></div><div class="ttdeci">int getSpecificMessageSentBy(string, int)</div><div class="ttdef"><b>Definition:</b> server.cpp:207</div></div>
+<div class="ttc" id="aclassServer_html_ade939cedf571567dbbbfcbb53783e570"><div class="ttname"><a href="classServer.html#ade939cedf571567dbbbfcbb53783e570">Server::getLastMessageDateTime</a></div><div class="ttdeci">string getLastMessageDateTime(string)</div><div class="ttdef"><b>Definition:</b> server.cpp:261</div></div>
+<div class="ttc" id="aclassServer_html_ac7d2a46d716ba8cdb461bfe126b5ce24"><div class="ttname"><a href="classServer.html#ac7d2a46d716ba8cdb461bfe126b5ce24">Server::getLastMessageContent</a></div><div class="ttdeci">string getLastMessageContent(string)</div><div class="ttdef"><b>Definition:</b> server.cpp:274</div></div>
+<div class="ttc" id="aclassServer_html_a20828ef03a381e0063b6a1a77fa22370"><div class="ttname"><a href="classServer.html#a20828ef03a381e0063b6a1a77fa22370">Server::setInviteCode</a></div><div class="ttdeci">void setInviteCode(string)</div><div class="ttdoc">Define o código de convite do servidor.</div><div class="ttdef"><b>Definition:</b> server.cpp:59</div></div>
+<div class="ttc" id="aclassServer_html_a295189591ec882e9ed960eb53a27895b"><div class="ttname"><a href="classServer.html#a295189591ec882e9ed960eb53a27895b">Server::addChannelToServer</a></div><div class="ttdeci">void addChannelToServer(string, bool)</div><div class="ttdef"><b>Definition:</b> server.cpp:123</div></div>
+<div class="ttc" id="aclassServer_html_aa1a3b8f4dd1fbfc1657bfc53b44a689c"><div class="ttname"><a href="classServer.html#aa1a3b8f4dd1fbfc1657bfc53b44a689c">Server::ChannelsDestroyer</a></div><div class="ttdeci">void ChannelsDestroyer()</div><div class="ttdef"><b>Definition:</b> server.cpp:17</div></div>
+<div class="ttc" id="aclassServer_html_ab3c0a1babbb5e22438d6b2e33c1ddb50"><div class="ttname"><a href="classServer.html#ab3c0a1babbb5e22438d6b2e33c1ddb50">Server::enteringServer</a></div><div class="ttdeci">void enteringServer(int)</div><div class="ttdoc">Adiciona um usuário ao servidor.</div><div class="ttdef"><b>Definition:</b> server.cpp:67</div></div>
+<div class="ttc" id="aclassServer_html_ab3e5ca3979006745dfd8f1ec4c06c885"><div class="ttname"><a href="classServer.html#ab3e5ca3979006745dfd8f1ec4c06c885">Server::getName</a></div><div class="ttdeci">string getName()</div><div class="ttdoc">Obtém o nome do servidor.</div><div class="ttdef"><b>Definition:</b> server.cpp:35</div></div>
+<div class="ttc" id="aclassServer_html_a364fc998bc3d5da97738675d8712bb76"><div class="ttname"><a href="classServer.html#a364fc998bc3d5da97738675d8712bb76">Server::alExistChannel</a></div><div class="ttdeci">bool alExistChannel(string)</div><div class="ttdef"><b>Definition:</b> server.cpp:107</div></div>
+<div class="ttc" id="avoicechannel_8h_html"><div class="ttname"><a href="voicechannel_8h.html">voicechannel.h</a></div></div>
+<div class="ttc" id="aclassServer_html_aa4431a1c517c4d4473ab261fb2d66a3d"><div class="ttname"><a href="classServer.html#aa4431a1c517c4d4473ab261fb2d66a3d">Server::setDescription</a></div><div class="ttdeci">void setDescription(string)</div><div class="ttdoc">Define a descrição do servidor.</div><div class="ttdef"><b>Definition:</b> server.cpp:51</div></div>
+<div class="ttc" id="aclassServer_html_aba4a136c912f68b9ca2305c85a629db2"><div class="ttname"><a href="classServer.html#aba4a136c912f68b9ca2305c85a629db2">Server::printChannels</a></div><div class="ttdeci">void printChannels()</div><div class="ttdef"><b>Definition:</b> server.cpp:142</div></div>
+<div class="ttc" id="aclassServer_html_a34d7d4010c176e845cbb467e5405563c"><div class="ttname"><a href="classServer.html#a34d7d4010c176e845cbb467e5405563c">Server::getQuantMessages</a></div><div class="ttdeci">int getQuantMessages(string)</div><div class="ttdef"><b>Definition:</b> server.cpp:193</div></div>
+<div class="ttc" id="aclassServer_html_a026ac8d8da68504cd5462b147461ac76"><div class="ttname"><a href="classServer.html#a026ac8d8da68504cd5462b147461ac76">Server::sendingMessage</a></div><div class="ttdeci">void sendingMessage(string, int, string, string)</div><div class="ttdef"><b>Definition:</b> server.cpp:178</div></div>
+<div class="ttc" id="aclassServer_html_a76c6eb357d86b60d32031ab3ded63d93"><div class="ttname"><a href="classServer.html#a76c6eb357d86b60d32031ab3ded63d93">Server::getQuantMembers</a></div><div class="ttdeci">int getQuantMembers()</div><div class="ttdoc">Obtém a quantidade de membros no servidor.</div><div class="ttdef"><b>Definition:</b> server.cpp:83</div></div>
+<div class="ttc" id="aclassServer_html_ad5ec9462b520e59f7ea831e157ee5e59"><div class="ttname"><a href="classServer.html#ad5ec9462b520e59f7ea831e157ee5e59">Server::Server</a></div><div class="ttdeci">Server()</div><div class="ttdef"><b>Definition:</b> server.h:19</div></div>
+<div class="ttc" id="aclassServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdef"><b>Definition:</b> server.h:12</div></div>
+<div class="ttc" id="aclassServer_html_a914104a2a50ac1c9895d139766a3c4d3"><div class="ttname"><a href="classServer.html#a914104a2a50ac1c9895d139766a3c4d3">Server::getSpecificMessageContent</a></div><div class="ttdeci">string getSpecificMessageContent(string, int)</div><div class="ttdef"><b>Definition:</b> server.cpp:235</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="System::removeServer" name="System::removeServer">
+<area shape="rect" id="node1" title="Remove um servidor do sistema." alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node2" href="$classUser.html#a010077fcd52d32fd3b4e1171f748a86a" title="Obtém o ID do usuário." alt="" coords="224,5,317,32"/>
+</map>

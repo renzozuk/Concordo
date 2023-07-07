@@ -1,0 +1,188 @@
+\hypertarget{classTextChannel}{}\doxysection{Referência da Classe Text\+Channel}
+\label{classTextChannel}\index{TextChannel@{TextChannel}}
+
+
+{\ttfamily \#include $<$textchannel.\+h$>$}
+
+
+
+Diagrama de hierarquia para Text\+Channel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classTextChannel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Text\+Channel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classTextChannel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTextChannel_a27dc7247d18c236392b503fc8c57ad55}{Text\+Channel}} ()
+\item 
+\mbox{\hyperlink{classTextChannel_a395e05505b430315e729075454772c82}{$\sim$\+Text\+Channel}} ()
+\item 
+\mbox{\hyperlink{classTextChannel_ab464df64d6b38bc23b7708b0708bfe79}{Text\+Channel}} (string, string)
+\item 
+void \mbox{\hyperlink{classTextChannel_a06651e1a415bd25e4cea7de9ea5d679c}{add\+Message\+To\+Channel}} (string, int, string)
+\item 
+int \mbox{\hyperlink{classTextChannel_a077eeaa737074216a98ae6f501999598}{get\+Quant\+Messages}} ()
+\item 
+int \mbox{\hyperlink{classTextChannel_af903c88a1f494a821293e552f6347cd0}{get\+Sent\+By\+Element}} (int)
+\item 
+string \mbox{\hyperlink{classTextChannel_acedf4e5ecc8d96cca7c49c2c456f4620}{get\+Date\+Time\+Element}} (int)
+\item 
+string \mbox{\hyperlink{classTextChannel_a6c15517393958e9a2c95a5dbc4fda91a}{get\+Content\+Element}} (int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classTextChannel_a27dc7247d18c236392b503fc8c57ad55}\label{classTextChannel_a27dc7247d18c236392b503fc8c57ad55}} 
+\index{TextChannel@{TextChannel}!TextChannel@{TextChannel}}
+\index{TextChannel@{TextChannel}!TextChannel@{TextChannel}}
+\doxysubsubsection{\texorpdfstring{TextChannel()}{TextChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Text\+Channel\+::\+Text\+Channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classTextChannel_a395e05505b430315e729075454772c82}\label{classTextChannel_a395e05505b430315e729075454772c82}} 
+\index{TextChannel@{TextChannel}!````~TextChannel@{$\sim$TextChannel}}
+\index{````~TextChannel@{$\sim$TextChannel}!TextChannel@{TextChannel}}
+\doxysubsubsection{\texorpdfstring{$\sim$TextChannel()}{~TextChannel()}}
+{\footnotesize\ttfamily Text\+Channel\+::$\sim$\+Text\+Channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classTextChannel_ab464df64d6b38bc23b7708b0708bfe79}\label{classTextChannel_ab464df64d6b38bc23b7708b0708bfe79}} 
+\index{TextChannel@{TextChannel}!TextChannel@{TextChannel}}
+\index{TextChannel@{TextChannel}!TextChannel@{TextChannel}}
+\doxysubsubsection{\texorpdfstring{TextChannel()}{TextChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Text\+Channel\+::\+Text\+Channel (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{type }\end{DoxyParamCaption})}
+
+Construtor da classe \mbox{\hyperlink{classTextChannel}{Text\+Channel}}. 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do canal. \\
+\hline
+{\em type} & O tipo do canal (text). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classTextChannel_a06651e1a415bd25e4cea7de9ea5d679c}\label{classTextChannel_a06651e1a415bd25e4cea7de9ea5d679c}} 
+\index{TextChannel@{TextChannel}!addMessageToChannel@{addMessageToChannel}}
+\index{addMessageToChannel@{addMessageToChannel}!TextChannel@{TextChannel}}
+\doxysubsubsection{\texorpdfstring{addMessageToChannel()}{addMessageToChannel()}}
+{\footnotesize\ttfamily void Text\+Channel\+::add\+Message\+To\+Channel (\begin{DoxyParamCaption}\item[{string}]{date,  }\item[{int}]{sent\+By,  }\item[{string}]{content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adiciona uma mensagem ao canal de texto. 
+\begin{DoxyParams}{Parâmetros}
+{\em date} & A data da mensagem. \\
+\hline
+{\em sent\+By} & O remetente da mensagem. \\
+\hline
+{\em content} & O conteúdo da mensagem. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa \mbox{\hyperlink{classChannel_a558006c6a06fd844e2d59c7361709c48}{Channel}}.
+
+\mbox{\Hypertarget{classTextChannel_a6c15517393958e9a2c95a5dbc4fda91a}\label{classTextChannel_a6c15517393958e9a2c95a5dbc4fda91a}} 
+\index{TextChannel@{TextChannel}!getContentElement@{getContentElement}}
+\index{getContentElement@{getContentElement}!TextChannel@{TextChannel}}
+\doxysubsubsection{\texorpdfstring{getContentElement()}{getContentElement()}}
+{\footnotesize\ttfamily string Text\+Channel\+::get\+Content\+Element (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Obtém o conteúdo de uma mensagem específica no canal de texto. 
+\begin{DoxyParams}{Parâmetros}
+{\em i} & A posição da mensagem na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O conteúdo da mensagem. 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classChannel_a15df60e72ff094c69edce2365b8191ec}{Channel}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTextChannel_a6c15517393958e9a2c95a5dbc4fda91a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTextChannel_acedf4e5ecc8d96cca7c49c2c456f4620}\label{classTextChannel_acedf4e5ecc8d96cca7c49c2c456f4620}} 
+\index{TextChannel@{TextChannel}!getDateTimeElement@{getDateTimeElement}}
+\index{getDateTimeElement@{getDateTimeElement}!TextChannel@{TextChannel}}
+\doxysubsubsection{\texorpdfstring{getDateTimeElement()}{getDateTimeElement()}}
+{\footnotesize\ttfamily string Text\+Channel\+::get\+Date\+Time\+Element (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Obtém a data e hora de uma mensagem específica no canal de texto. 
+\begin{DoxyParams}{Parâmetros}
+{\em i} & A posição da mensagem na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A data e hora da mensagem. 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classChannel_a56ff43d9dd1da736375c008c16f8a14c}{Channel}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTextChannel_acedf4e5ecc8d96cca7c49c2c456f4620_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTextChannel_a077eeaa737074216a98ae6f501999598}\label{classTextChannel_a077eeaa737074216a98ae6f501999598}} 
+\index{TextChannel@{TextChannel}!getQuantMessages@{getQuantMessages}}
+\index{getQuantMessages@{getQuantMessages}!TextChannel@{TextChannel}}
+\doxysubsubsection{\texorpdfstring{getQuantMessages()}{getQuantMessages()}}
+{\footnotesize\ttfamily int Text\+Channel\+::get\+Quant\+Messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Obtém a quantidade de mensagens no canal de texto. \begin{DoxyReturn}{Retorna}
+A quantidade de mensagens no canal. 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classChannel_abd7463706b67c5e5fbef3cdbee22ca6f}{Channel}}.
+
+\mbox{\Hypertarget{classTextChannel_af903c88a1f494a821293e552f6347cd0}\label{classTextChannel_af903c88a1f494a821293e552f6347cd0}} 
+\index{TextChannel@{TextChannel}!getSentByElement@{getSentByElement}}
+\index{getSentByElement@{getSentByElement}!TextChannel@{TextChannel}}
+\doxysubsubsection{\texorpdfstring{getSentByElement()}{getSentByElement()}}
+{\footnotesize\ttfamily int Text\+Channel\+::get\+Sent\+By\+Element (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Obtém o remetente de uma mensagem específica no canal de texto. 
+\begin{DoxyParams}{Parâmetros}
+{\em i} & A posição da mensagem na lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O remetente da mensagem. 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classChannel_a065dfc94af6d6ede49a9ffcb698f75d6}{Channel}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTextChannel_af903c88a1f494a821293e552f6347cd0_cgraph}
+\end{center}
+\end{figure}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{textchannel_8h}{textchannel.\+h}}\item 
+src/\mbox{\hyperlink{textchannel_8cpp}{textchannel.\+cpp}}\end{DoxyCompactItemize}

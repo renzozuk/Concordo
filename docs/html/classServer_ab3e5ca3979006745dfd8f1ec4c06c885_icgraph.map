@@ -1,0 +1,10 @@
+<map id="Server::getName" name="Server::getName">
+<area shape="rect" id="node1" title="Obtém o nome do servidor." alt="" coords="241,157,373,184"/>
+<area shape="rect" id="node2" href="$classSystem.html#a9515034ff7ea3cf86b40a0b0fa664e1f" title=" " alt="" coords="6,5,193,32"/>
+<area shape="rect" id="node3" href="$classSystem.html#a6ae6d7b3a484e1dbfde2d270c839792c" title="Realiza a saída de um servidor." alt="" coords="15,56,184,83"/>
+<area shape="rect" id="node4" href="$classSystem.html#adf92a2ff3ec43c92180fede0ab993322" title="Lista os participantes do servidor atual." alt="" coords="12,107,187,133"/>
+<area shape="rect" id="node5" href="$classSystem.html#a82164836a544570377390f22af619ad9" title=" " alt="" coords="20,157,179,184"/>
+<area shape="rect" id="node6" href="$classSystem.html#a36ae0a35c6b1364dceca3f188c127242" title=" " alt="" coords="15,208,184,235"/>
+<area shape="rect" id="node7" href="$classSystem.html#ad3be898dfe00394b6d4814d664f626b2" title=" " alt="" coords="12,259,187,285"/>
+<area shape="rect" id="node8" href="$classSystem.html#a97b5eb5dcbbb3f428d9946d90ba33329" title=" " alt="" coords="5,309,193,336"/>
+</map>

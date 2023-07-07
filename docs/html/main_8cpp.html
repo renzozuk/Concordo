@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Referência do Arquivo src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">V2.0</span>
+   </div>
+   <div id="projectbrief">Neste projeto temos a implementação de um sistema chamado Concordo com recursos similares ao Discord.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementação da leitura do script e dos comandos a serem executados pelo usuário.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;<a class="el" href="system_8h_source.html">system.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#src_2main_8cpp" alt=""/></div>
+<map name="src_2main_8cpp" id="src_2main_8cpp">
+<area shape="rect" title="Implementação da leitura do script e dos comandos a serem executados pelo usuário." alt="" coords="139,5,245,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,85,107"/>
+<area shape="rect" title=" " alt="" coords="110,80,183,107"/>
+<area shape="rect" title=" " alt="" coords="208,80,267,107"/>
+<area shape="rect" href="system_8h.html" title=" " alt="" coords="291,80,373,107"/>
+<area shape="rect" href="user_8h.html" title=" " alt="" coords="256,155,317,181"/>
+<area shape="rect" href="server_8h.html" title=" " alt="" coords="341,155,416,181"/>
+<area shape="rect" title=" " alt="" coords="257,229,316,256"/>
+<area shape="rect" title=" " alt="" coords="425,379,487,405"/>
+<area shape="rect" href="textchannel_8h.html" title=" " alt="" coords="391,229,502,256"/>
+<area shape="rect" href="voicechannel_8h.html" title=" " alt="" coords="527,229,647,256"/>
+<area shape="rect" href="channel_8h.html" title=" " alt="" coords="517,304,603,331"/>
+<area shape="rect" href="message_8h.html" title=" " alt="" coords="400,304,493,331"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:aad322dd5d64050ad75d6cb3e5d884f2d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aad322dd5d64050ad75d6cb3e5d884f2d">splitting</a> (string line, bool isthefirst)</td></tr>
+<tr class="memdesc:aad322dd5d64050ad75d6cb3e5d884f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide uma string em duas partes no primeiro espaço encontrado.  <a href="main_8cpp.html#aad322dd5d64050ad75d6cb3e5d884f2d">Mais...</a><br /></td></tr>
+<tr class="separator:aad322dd5d64050ad75d6cb3e5d884f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608e4172c1d22eb1662ead5122e66228"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a608e4172c1d22eb1662ead5122e66228">onlySpaces</a> (string name)</td></tr>
+<tr class="memdesc:a608e4172c1d22eb1662ead5122e66228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se uma string contém apenas espaços.  <a href="main_8cpp.html#a608e4172c1d22eb1662ead5122e66228">Mais...</a><br /></td></tr>
+<tr class="separator:a608e4172c1d22eb1662ead5122e66228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ece2743fd4d75edf98346f47cd34b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5ece2743fd4d75edf98346f47cd34b80">signup</a> (string parameter)</td></tr>
+<tr class="memdesc:a5ece2743fd4d75edf98346f47cd34b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trata o comando de cadastro de usuário.  <a href="main_8cpp.html#a5ece2743fd4d75edf98346f47cd34b80">Mais...</a><br /></td></tr>
+<tr class="separator:a5ece2743fd4d75edf98346f47cd34b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ef85c04bffdf553e5cebb8c7a7e5d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad3ef85c04bffdf553e5cebb8c7a7e5d2">login</a> (string parameter)</td></tr>
+<tr class="memdesc:ad3ef85c04bffdf553e5cebb8c7a7e5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trata o comando de login.  <a href="main_8cpp.html#ad3ef85c04bffdf553e5cebb8c7a7e5d2">Mais...</a><br /></td></tr>
+<tr class="separator:ad3ef85c04bffdf553e5cebb8c7a7e5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb68901eb3e2f9d8133c5fd246109b6b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abb68901eb3e2f9d8133c5fd246109b6b">creatingServer</a> (string name)</td></tr>
+<tr class="memdesc:abb68901eb3e2f9d8133c5fd246109b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trata o comando de criação de servidor.  <a href="main_8cpp.html#abb68901eb3e2f9d8133c5fd246109b6b">Mais...</a><br /></td></tr>
+<tr class="separator:abb68901eb3e2f9d8133c5fd246109b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507c56a6993e9ef0f724800f44c9d1ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a507c56a6993e9ef0f724800f44c9d1ae">settingServerDescription</a> (string parameter)</td></tr>
+<tr class="memdesc:a507c56a6993e9ef0f724800f44c9d1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trata o comando de definição de descrição do servidor.  <a href="main_8cpp.html#a507c56a6993e9ef0f724800f44c9d1ae">Mais...</a><br /></td></tr>
+<tr class="separator:a507c56a6993e9ef0f724800f44c9d1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924a9af4b202e6095a3359143ee13f17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a924a9af4b202e6095a3359143ee13f17">settingServerInviteCode</a> (string parameter)</td></tr>
+<tr class="memdesc:a924a9af4b202e6095a3359143ee13f17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trata o comando de definição do código de convite do servidor.  <a href="main_8cpp.html#a924a9af4b202e6095a3359143ee13f17">Mais...</a><br /></td></tr>
+<tr class="separator:a924a9af4b202e6095a3359143ee13f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1cba6e46081fc6587c11bd85a5936f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aaa1cba6e46081fc6587c11bd85a5936f">removingServer</a> (string parameter)</td></tr>
+<tr class="memdesc:aaa1cba6e46081fc6587c11bd85a5936f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trata o comando de remoção de servidor.  <a href="main_8cpp.html#aaa1cba6e46081fc6587c11bd85a5936f">Mais...</a><br /></td></tr>
+<tr class="separator:aaa1cba6e46081fc6587c11bd85a5936f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cb3afdaa40e4e0c264b2952bf833ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af7cb3afdaa40e4e0c264b2952bf833ab">creatingChannel</a> (string parameter)</td></tr>
+<tr class="memdesc:af7cb3afdaa40e4e0c264b2952bf833ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um canal com base nos parâmetros fornecidos.  <a href="main_8cpp.html#af7cb3afdaa40e4e0c264b2952bf833ab">Mais...</a><br /></td></tr>
+<tr class="separator:af7cb3afdaa40e4e0c264b2952bf833ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37038c5a2a463a9d29021a962da559d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad37038c5a2a463a9d29021a962da559d">enteringChannel</a> (string parameter, bool changing)</td></tr>
+<tr class="memdesc:ad37038c5a2a463a9d29021a962da559d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entra em um canal existente.  <a href="main_8cpp.html#ad37038c5a2a463a9d29021a962da559d">Mais...</a><br /></td></tr>
+<tr class="separator:ad37038c5a2a463a9d29021a962da559d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377ddf610fb01d678c1b4949a4dfcb40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a377ddf610fb01d678c1b4949a4dfcb40">readingCommands</a> (vector&lt; string &gt; commands)</td></tr>
+<tr class="memdesc:a377ddf610fb01d678c1b4949a4dfcb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê e processa os comandos do usuário.  <a href="main_8cpp.html#a377ddf610fb01d678c1b4949a4dfcb40">Mais...</a><br /></td></tr>
+<tr class="separator:a377ddf610fb01d678c1b4949a4dfcb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal do aplicativo Concordo.  <a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">Mais...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Implementação da leitura do script e dos comandos a serem executados pelo usuário. </p>
+<dl class="section author"><dt>Autor</dt><dd>Renzo Zukeram </dd></dl>
+<dl class="section version"><dt>Versão</dt><dd>2.0 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>2023-07-05</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
+</div><h2 class="groupheader">Funções</h2>
+<a id="af7cb3afdaa40e4e0c264b2952bf833ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7cb3afdaa40e4e0c264b2952bf833ab">&#9670;&nbsp;</a></span>creatingChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void creatingChannel </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>parameter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um canal com base nos parâmetros fornecidos. </p>
+<p>Esta função cria um canal com base nos parâmetros fornecidos, que incluem o nome do canal e o tipo do canal. O tipo do canal pode ser "texto" ou "voz".</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>Uma string contendo os parâmetros necessários para criar o canal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_af7cb3afdaa40e4e0c264b2952bf833ab_cgraph.png" border="0" usemap="#main_8cpp_af7cb3afdaa40e4e0c264b2952bf833ab_cgraph" alt=""/></div>
+<map name="main_8cpp_af7cb3afdaa40e4e0c264b2952bf833ab_cgraph" id="main_8cpp_af7cb3afdaa40e4e0c264b2952bf833ab_cgraph">
+<area shape="rect" title="Cria um canal com base nos parâmetros fornecidos." alt="" coords="5,5,133,32"/>
+<area shape="rect" href="main_8cpp.html#aad322dd5d64050ad75d6cb3e5d884f2d" title="Divide uma string em duas partes no primeiro espaço encontrado." alt="" coords="181,5,256,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb68901eb3e2f9d8133c5fd246109b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb68901eb3e2f9d8133c5fd246109b6b">&#9670;&nbsp;</a></span>creatingServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool creatingServer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trata o comando de criação de servidor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>O nome do servidor a ser criado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad37038c5a2a463a9d29021a962da559d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37038c5a2a463a9d29021a962da559d">&#9670;&nbsp;</a></span>enteringChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool enteringChannel </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>parameter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>changing</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Entra em um canal existente. </p>
+<p>Esta função permite que o usuário entre em um canal existente com base no parâmetro fornecido.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>Uma string contendo o parâmetro necessário para entrar no canal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um valor booleano indicando se a entrada no canal foi bem-sucedida ou não. </dd></dl>
+
+</div>
+</div>
+<a id="ad3ef85c04bffdf553e5cebb8c7a7e5d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ef85c04bffdf553e5cebb8c7a7e5d2">&#9670;&nbsp;</a></span>login()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool login </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>parameter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trata o comando de login. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>A string de parâmetro contendo e-mail e senha. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Verdadeiro se o login for bem-sucedido, falso caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função principal do aplicativo Concordo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>O número de argumentos a serem recebidos. </td></tr>
+    <tr><td class="paramname">argv</td><td>Um array composto pelos argumentos recebidos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>O status de saída do aplicativo. </dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
+<map name="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
+<area shape="rect" title="Função principal do aplicativo Concordo." alt="" coords="5,5,60,32"/>
+<area shape="rect" href="main_8cpp.html#a377ddf610fb01d678c1b4949a4dfcb40" title="Lê e processa os comandos do usuário." alt="" coords="108,5,253,32"/>
+<area shape="rect" href="main_8cpp.html#aad322dd5d64050ad75d6cb3e5d884f2d" title="Divide uma string em duas partes no primeiro espaço encontrado." alt="" coords="301,5,376,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a608e4172c1d22eb1662ead5122e66228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a608e4172c1d22eb1662ead5122e66228">&#9670;&nbsp;</a></span>onlySpaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool onlySpaces </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se uma string contém apenas espaços. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>A string de entrada a ser verificada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Verdadeiro se a string contém apenas espaços, falso caso contrário. </dd></dl>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a608e4172c1d22eb1662ead5122e66228_icgraph.png" border="0" usemap="#main_8cpp_a608e4172c1d22eb1662ead5122e66228_icgraph" alt=""/></div>
+<map name="main_8cpp_a608e4172c1d22eb1662ead5122e66228_icgraph" id="main_8cpp_a608e4172c1d22eb1662ead5122e66228_icgraph">
+<area shape="rect" title="Verifica se uma string contém apenas espaços." alt="" coords="119,5,215,32"/>
+<area shape="rect" href="main_8cpp.html#a5ece2743fd4d75edf98346f47cd34b80" title="Trata o comando de cadastro de usuário." alt="" coords="5,5,71,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a377ddf610fb01d678c1b4949a4dfcb40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377ddf610fb01d678c1b4949a4dfcb40">&#9670;&nbsp;</a></span>readingCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void readingCommands </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>commands</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê e processa os comandos do usuário. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commands</td><td>O vetor contendo os comandos do script fornecido pelo usuário. </td></tr>
+    <tr><td class="paramname">choice</td><td>O comando recebido do arquivo ou digitado pelo usuário. </td></tr>
+    <tr><td class="paramname">parameter</td><td>Reune os parâmetros do comando digitado pelo usuário. </td></tr>
+    <tr><td class="paramname">tf</td><td>Um boolean auxiliar para algumas situações específicas. </td></tr>
+    <tr><td class="paramname">logstage</td><td>Verifica em qual nível de acesso o usuário está. Por exemplo: Quando logstage = 0: usuário não logado; Quando logstage = 1: usuário logado; Quando logstage = 2: usuário logado e visualizando um servidor; Quando logstage = 3: usuário logado, visualizando um servidor e visualizando um canal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_cgraph.png" border="0" usemap="#main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_cgraph" alt=""/></div>
+<map name="main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_cgraph" id="main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_cgraph">
+<area shape="rect" title="Lê e processa os comandos do usuário." alt="" coords="5,5,151,32"/>
+<area shape="rect" href="main_8cpp.html#aad322dd5d64050ad75d6cb3e5d884f2d" title="Divide uma string em duas partes no primeiro espaço encontrado." alt="" coords="199,5,273,32"/>
+</map>
+</div>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_icgraph.png" border="0" usemap="#main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_icgraph" alt=""/></div>
+<map name="main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_icgraph" id="main_8cpp_a377ddf610fb01d678c1b4949a4dfcb40_icgraph">
+<area shape="rect" title="Lê e processa os comandos do usuário." alt="" coords="108,5,253,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Função principal do aplicativo Concordo." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaa1cba6e46081fc6587c11bd85a5936f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa1cba6e46081fc6587c11bd85a5936f">&#9670;&nbsp;</a></span>removingServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removingServer </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>parameter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trata o comando de remoção de servidor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>O nome do servidor a ser removido. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a507c56a6993e9ef0f724800f44c9d1ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507c56a6993e9ef0f724800f44c9d1ae">&#9670;&nbsp;</a></span>settingServerDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void settingServerDescription </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>parameter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trata o comando de definição de descrição do servidor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>A string de parâmetro contendo o nome do servidor e a descrição. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a924a9af4b202e6095a3359143ee13f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924a9af4b202e6095a3359143ee13f17">&#9670;&nbsp;</a></span>settingServerInviteCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void settingServerInviteCode </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>parameter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trata o comando de definição do código de convite do servidor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>A string de parâmetro contendo o nome do servidor e o código de convite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5ece2743fd4d75edf98346f47cd34b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ece2743fd4d75edf98346f47cd34b80">&#9670;&nbsp;</a></span>signup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signup </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>parameter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trata o comando de cadastro de usuário. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>A string de parâmetro contendo e-mail, senha e nome. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a5ece2743fd4d75edf98346f47cd34b80_cgraph.png" border="0" usemap="#main_8cpp_a5ece2743fd4d75edf98346f47cd34b80_cgraph" alt=""/></div>
+<map name="main_8cpp_a5ece2743fd4d75edf98346f47cd34b80_cgraph" id="main_8cpp_a5ece2743fd4d75edf98346f47cd34b80_cgraph">
+<area shape="rect" title="Trata o comando de cadastro de usuário." alt="" coords="5,5,71,32"/>
+<area shape="rect" href="main_8cpp.html#a608e4172c1d22eb1662ead5122e66228" title="Verifica se uma string contém apenas espaços." alt="" coords="119,5,215,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aad322dd5d64050ad75d6cb3e5d884f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad322dd5d64050ad75d6cb3e5d884f2d">&#9670;&nbsp;</a></span>splitting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string splitting </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isthefirst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Divide uma string em duas partes no primeiro espaço encontrado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>A string de entrada a ser dividida. </td></tr>
+    <tr><td class="paramname">isthefirst</td><td>Flag indicando se deve retornar a primeira parte (verdadeiro) ou a segunda parte (falso). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>A primeira ou segunda parte da string dividida. </dd></dl>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_aad322dd5d64050ad75d6cb3e5d884f2d_icgraph.png" border="0" usemap="#main_8cpp_aad322dd5d64050ad75d6cb3e5d884f2d_icgraph" alt=""/></div>
+<map name="main_8cpp_aad322dd5d64050ad75d6cb3e5d884f2d_icgraph" id="main_8cpp_aad322dd5d64050ad75d6cb3e5d884f2d_icgraph">
+<area shape="rect" title="Divide uma string em duas partes no primeiro espaço encontrado." alt="" coords="301,31,376,57"/>
+<area shape="rect" href="main_8cpp.html#af7cb3afdaa40e4e0c264b2952bf833ab" title="Cria um canal com base nos parâmetros fornecidos." alt="" coords="117,5,245,32"/>
+<area shape="rect" href="main_8cpp.html#a377ddf610fb01d678c1b4949a4dfcb40" title="Lê e processa os comandos do usuário." alt="" coords="108,56,253,83"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Função principal do aplicativo Concordo." alt="" coords="5,56,60,83"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

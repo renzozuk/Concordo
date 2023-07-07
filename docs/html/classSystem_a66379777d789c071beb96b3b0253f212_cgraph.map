@@ -1,0 +1,7 @@
+<map id="System::disconnect" name="System::disconnect">
+<area shape="rect" id="node1" title="Desconecta o usuário atualmente logado no sistema." alt="" coords="5,81,155,108"/>
+<area shape="rect" id="node2" href="$classUser.html#a010077fcd52d32fd3b4e1171f748a86a" title="Obtém o ID do usuário." alt="" coords="256,5,349,32"/>
+<area shape="rect" id="node3" href="$classSystem.html#a15e7e3b270b46efb890029fe6aee34f1" title=" " alt="" coords="203,56,403,83"/>
+<area shape="rect" id="node4" href="$classSystem.html#ad1de91e5ec17795f2994de4ee0635bc1" title="Define o servidor atualmente selecionado." alt="" coords="208,107,397,133"/>
+<area shape="rect" id="node5" href="$classSystem.html#a12354c66ecb3c87dfc47cd80431b9699" title="Define o usuário atualmente logado no sistema." alt="" coords="209,157,397,184"/>
+</map>
