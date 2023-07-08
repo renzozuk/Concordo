@@ -19,9 +19,8 @@ using std::endl;
  * @param name O nome do canal.
  * @param type O tipo do canal (voice).
  */
-VoiceChannel::VoiceChannel(string name, string type){
+VoiceChannel::VoiceChannel(string name){
     this->name = name;
-    this->type = type;
 }
 
 /**

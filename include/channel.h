@@ -8,14 +8,14 @@ using std::vector;
 
 class Channel{
 protected:
-    string name, type;
+    string name;
     //the string type is an auxiliary temporary string, that string will be removed and the methods will be improved soon
 public:
     Channel() {}
     ~Channel() {}
-    Channel(string, string);    
+    Channel(string);    
     string getName();
-    string getType();
+    //string getType();
     virtual void addMessageToChannel(string, int, string) {}
     virtual int getQuantMessages() {}
     virtual int getSentByElement(int) {}

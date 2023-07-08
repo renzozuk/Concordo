@@ -33,7 +33,7 @@ public:
     void setServerDescription(string, string);
     void setServerInviteCode(string, string);
     void listServers();
-    bool enteringServer(string);
+    bool enteringServer(string, string);
     void removeServer(string);
     void leavingServer(bool);
     void listParticipants();

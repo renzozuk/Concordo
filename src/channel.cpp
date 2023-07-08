@@ -16,9 +16,8 @@
  * @param name O nome do canal.
  * @param type O tipo do canal (text ou voice).
  */
-Channel::Channel(string name, string type){
+Channel::Channel(string name){
     this->name = name;
-    this->type = type;
 }
 
 /**
@@ -33,6 +32,6 @@ string Channel::getName(){
  * Obtém o tipo do canal.
  * @return O tipo do canal (text ou voice).
  */
-string Channel::getType(){
+/*string Channel::getType(){
     return type;
-}
+}*/

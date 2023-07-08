@@ -10,7 +10,7 @@ private:
 public:
     VoiceChannel() {}
     ~VoiceChannel() {}
-    VoiceChannel(string, string);
+    VoiceChannel(string);
     //start messages
     void setLastMessage(string, int, string);
     int getSentBy();

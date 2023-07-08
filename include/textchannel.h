@@ -10,7 +10,7 @@ private:
 public:
     TextChannel() {}
     ~TextChannel() {}
-    TextChannel(string, string);
+    TextChannel(string);
     //start messages
     void addMessageToChannel(string, int, string);
     int getQuantMessages();

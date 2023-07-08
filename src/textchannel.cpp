@@ -16,9 +16,8 @@
  * @param name O nome do canal.
  * @param type O tipo do canal (text).
  */
-TextChannel::TextChannel(string name, string type){
+TextChannel::TextChannel(string name){
     this->name = name;
-    this->type = type;
 }
 
 /**

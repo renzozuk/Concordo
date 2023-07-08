@@ -32,6 +32,7 @@ public:
     bool alExistChannel(string);
     void addChannelToServer(string, bool);
     void printChannels();
+    string getChannelType(string);
     Channel getChannel(string);
     void sendingMessage(string, int, string, string);
     int getQuantMessages(string);

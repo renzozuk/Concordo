@@ -179,7 +179,7 @@ bool System::addServerToSystem(string name){
         Server srv(currentLoggedInUser.getId(), name);
         servers.push_back(srv);
         cout << "Servidor criado." << endl;
-        System::enteringServer(name);
+        System::enteringServer(name, "");
         return true;
     }else{
         cout << "Servidor com esse nome já existe." << endl;
@@ -293,10 +293,10 @@ void System::removeServer(string name){
  * @param parameter O comando de entrada, que contém o nome do servidor e pode conter o código de convite separados por espaço.
  * @return Verdadeiro se a entrada for bem-sucedida, falso caso contrário.
  */
-bool System::enteringServer(string parameter){
-    int spaces = 0; string name, ic; bool found = false;
+bool System::enteringServer(string name, string ic){
+    int spaces = 0; /*string name, ic;*/ bool found = false;
     //começo do tratamento do parâmetro
-    for(int i=0; i<parameter.length(); i++){
+    /*for(int i=0; i<parameter.length(); i++){
         if(parameter[i] == ' '){
             spaces++;
         }
@@ -316,13 +316,13 @@ bool System::enteringServer(string parameter){
                 }
             }
         }
-    }
+    }*/
     //fim do tratamento do parâmetro
     //começo da busca pelo servidor
     for(int i=0; i<servers.size(); i++){
         if(name == servers[i].getName()){
             found = true;
-            if(ic == servers[i].getInviteCode() || currentLoggedInUser.getId() == servers[i].getOwnerId()){
+            if(ic == servers[i].getInviteCode() || currentLoggedInUser.getId() == servers[i].getOwnerId() || servers[i].getInviteCode() == ""){
                 servers[i].enteringServer(currentLoggedInUser.getId());
                 System::setCurrentServer(servers[i]);
                 cout << "Entrou no servidor '"<< servers[i].getName() <<"' com sucesso." << endl;
@@ -418,7 +418,7 @@ bool System::enteringChannel(string name, bool changing){
             if(found == true){
                 if(changing == false){
                     currentChannel = servers[i].getChannel(name);
-                    cout << "Entrou no canal '" << currentChannel.getName() << "'." << endl;
+                    cout << "Entrando no canal '" << currentChannel.getName() << "'." << endl;
                 }else{
                     string old = currentChannel.getName();
                     currentChannel = servers[i].getChannel(name);
@@ -426,7 +426,7 @@ bool System::enteringChannel(string name, bool changing){
                     if(old == nova){
                         cout << "Você já está no canal '" << currentChannel.getName() << "'." << endl;
                     }else{
-                        cout << "Saindo do canal '" << old << "' e entrou no canal '" << nova << "'." << endl;
+                        cout << "Saindo do canal '" << old << "' e entrando no canal '" << nova << "'." << endl;
                     }
                 }
             }else{
@@ -465,7 +465,7 @@ void System::sendingMessage(string date, string content){
 void System::printMessages(){
     for(int i=0; i<servers.size(); i++){
         if(currentServer.getName() == servers[i].getName()){
-            if(currentChannel.getType() == "text"){
+            if(servers[i].getChannelType(currentChannel.getName()) == "text"){
                 string sentBy, datetime, content; int atualid;
                 if(servers[i].getQuantMessages(currentChannel.getName()) != 0 && servers[i].getSpecificMessageContent(currentChannel.getName(), 0) == ""){
                     cout << "Sem mensagens para exibir." << endl;
@@ -479,7 +479,7 @@ void System::printMessages(){
                     sentBy = getUserNameById(atualid);
                     cout << sentBy << "<" << datetime << ">: " << content << endl;
                 }
-            }else if(currentChannel.getType() == "voice"){
+            }else if(servers[i].getChannelType(currentChannel.getName()) == "voice"){
                 if(servers[i].getLastMessageContent(currentChannel.getName()) == ""){
                     cout << "Sem mensagens para exibir." << endl;
                     return;

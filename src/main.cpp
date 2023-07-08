@@ -28,12 +28,13 @@ static System sys;
  * @return A primeira ou segunda parte da string dividida.
  */
 string splitting(string line, bool isthefirst){
-    size_t space = line.find(" "); string firstpart, secondpart;
+    size_t space = line.find(" ");
     if(isthefirst == true){
+        string firstpart;
         firstpart = line.substr(0, space);
         return firstpart;
     }else{
-        int spaces = 0;
+        string secondpart; int spaces = 0;
         for(int i=0; i<line.length(); i++){
             if(line[i] == ' '){
                 spaces++;
@@ -255,6 +256,14 @@ void removingServer(string parameter){
     }
 }
 
+bool enteringServer(string parameter){
+    bool tf;
+    string name = splitting(parameter, true);
+    string ic = splitting(parameter, false);
+    tf = sys.enteringServer(name, ic);
+    return tf;
+}
+
 /**
  * @brief Cria um canal com base nos parâmetros fornecidos.
  *
@@ -321,8 +330,30 @@ bool enteringChannel(string parameter, bool changing){
  * @param logstage Verifica em qual nível de acesso o usuário está. Por exemplo: Quando logstage = 0: usuário não logado; Quando logstage = 1: usuário logado; Quando logstage = 2: usuário logado e visualizando um servidor; Quando logstage = 3: usuário logado, visualizando um servidor e visualizando um canal.
  * 
  */
-void readingCommands(vector<string> commands){
-    string choice, parameter, temp; bool tf; int i = 0, logstage;
+/*void readingCommands(vector<string> commands){
+    
+}*/
+
+/**
+ * @brief Função principal do aplicativo Concordo.
+ *
+ * @param argc O número de argumentos a serem recebidos.
+ * @param argv Um array composto pelos argumentos recebidos.
+ * @return O status de saída do aplicativo.
+ */
+int main(int argc, char* argv[]){
+    system("clear");
+    cout << "「「「 Bem-vindo ao concordo! 」」」" << endl;
+    vector<string> commands;
+    if(argc >= 2){
+        string temp;
+        ifstream file(argv[1]);
+        while(getline(file, temp)){
+            commands.push_back(temp);
+        }
+        file.close();
+    }
+    string choice, parameter, temp; bool tf; int i = 0, logstage = 0;
     do{
         if(i < commands.size()){
             choice = splitting(commands[i], true);
@@ -377,7 +408,7 @@ void readingCommands(vector<string> commands){
                     removingServer(parameter);
                 }else if(choice == "enter-server"){
                     if(logstage == 1){
-                        tf = sys.enteringServer(parameter);
+                        tf = enteringServer(parameter);
                         if(tf == true){
                             logstage = 2;
                         }
@@ -451,29 +482,6 @@ void readingCommands(vector<string> commands){
         }
     }while(choice != "quit");
     sys.ChannelsDestroyer();
-}
-
-/**
- * @brief Função principal do aplicativo Concordo.
- *
- * @param argc O número de argumentos a serem recebidos.
- * @param argv Um array composto pelos argumentos recebidos.
- * @return O status de saída do aplicativo.
- */
-int main(int argc, char* argv[]){
-    system("clear");
-    cout << "「「「 Bem-vindo ao concordo! 」」」" << endl;
-    vector<string> commands;
-    if(argc >= 2){
-        string temp;
-        ifstream file(argv[1]);
-        while(getline(file, temp)){
-            commands.push_back(temp);
-        }
-        file.close();
-    }
-    readingCommands(commands);
     cout << "「「「 Saindo do Concordo... Até mais! 」」」" << endl;
-
     return 0;
 }

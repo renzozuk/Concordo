@@ -14,10 +14,23 @@
 using std::cout;
 using std::endl;
 
-void Server::ChannelsDestroyer(){
-    for(Channel *channel : channels){
-        delete channel;
+/**
+ * @brief Destrutor de canais.
+ * 
+ */
+void Server::ChannelsDestroyer() {
+    for (Channel* chnl : channels) {
+        if (TextChannel* tc = dynamic_cast<TextChannel*>(chnl)) {
+            delete tc;
+        } else if (VoiceChannel* vc = dynamic_cast<VoiceChannel*>(chnl)) {
+            delete vc;
+        }
     }
+    //removido temporariamente
+    //se não for mais necessário, será removido permanentemente
+    /*for(Channel *channel : channels){
+        delete channel;
+    }*/
 }
 
 /**
@@ -127,10 +140,10 @@ void Server::addChannelToServer(string name, bool isText){
         return;
     }else{
         if(isText == true){
-            channels.push_back(new TextChannel(name, "text"));
+            channels.push_back(new TextChannel(name));
             cout << "Canal de texto '" << name << "' criado." << endl;
         }else{
-            channels.push_back(new VoiceChannel(name, "voice"));
+            channels.push_back(new VoiceChannel(name));
             cout << "Canal de voz '" << name << "' criado." << endl;
         }
     }
@@ -140,16 +153,29 @@ void Server::addChannelToServer(string name, bool isText){
  * Imprime os canais do servidor.
  */
 void Server::printChannels(){
+    //Channel* addedObject = channels.back();
     cout << "#canais de texto" << endl;
-    for(const auto& chnl: channels){
-        if(chnl->getType() == "text"){
-            cout << chnl->getName() << endl;
+    for(Channel* chnl: channels) {
+        if(TextChannel* tc = dynamic_cast<TextChannel*>(chnl)){
+            cout << tc->getName() << endl;
         }
     }
     cout << "#canais de voz" << endl;
-    for(const auto& chnl: channels){
-        if(chnl->getType() == "voice"){
-            cout << chnl->getName() << endl;
+    for(Channel* chnl: channels){
+        if(VoiceChannel* vc = dynamic_cast<VoiceChannel*>(chnl)){
+            cout << vc->getName() << endl;
+        }
+    }
+}
+
+string Server::getChannelType(string currentChannelName){
+    for(Channel* chnl: channels){
+        if(chnl->getName() == currentChannelName){
+            if(TextChannel* tc = dynamic_cast<TextChannel*>(chnl)){
+                return "text";
+            }else if(VoiceChannel* vc = dynamic_cast<VoiceChannel*>(chnl)){
+                return "voice";
+            }
         }
     }
 }
@@ -177,9 +203,9 @@ Channel Server::getChannel(string name){
  */
 void Server::sendingMessage(string date, int sentBy, string content, string currentChannelName){
     for(const auto& chnl: channels){
-        if(chnl->getType() == "text" && chnl->getName() == currentChannelName){
+        if(Server::getChannelType(chnl->getName()) == "text" && chnl->getName() == currentChannelName){
             chnl->addMessageToChannel(date, sentBy, content);
-        }else if(chnl->getType() == "voice" && chnl->getName() == currentChannelName){
+        }else if(Server::getChannelType(chnl->getName()) == "voice" && chnl->getName() == currentChannelName){
             chnl->setLastMessage(date, sentBy, content);
         }
     }
