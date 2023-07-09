@@ -1,0 +1,212 @@
+pineapple
+list-servers
+list-participants
+login nonexistent@gmail.com FU3QyV
+create-user renzo.zuk@example.com E5wdYaPzv8k7ijA2ioLdSpYb9Xg67t88W8BW8T9BmJm50NZD5Y Renzo
+create-user inuyasha@gmail.com WAcd6G 犬夜叉
+create-user sesshomaru@outlook.com NeM8vm 殺生丸
+create-user kagomehigurashi@gmail.com d7RfmA 日暮かごめ
+create-user kykyo@outlook.com W7u2Wv 桔梗
+login inuyasha@gmail.com WAcd6G
+create-server inuyasha-fandom
+list-channels
+create-channel example-1
+create-channel example-1 texto
+enter-channel example-1
+send-message
+send-message oi
+list-messages
+disconnect
+login sesshomaru@outlook.com NeM8vm
+enter-server inuyasha-fandom
+disconnect
+login kagomehigurashi@gmail.com d7RfmA
+enter-server inuyasha-fandom
+disconnect
+login kykyo@outlook.com W7u2Wv
+enter-server inuyasha-fandom
+list-participants
+create-channel example-2 voz
+enter-channel example-2
+list-messages
+send-message olá
+list-messages
+send-message alguém aí?
+list-messages
+leave-channel
+create-channel example-3 texto
+create-channel example-4 voz
+create-channel example-5 texto
+create-channel example-6 voz
+create-channel example-7 texto
+create-channel example-8 voz
+create-channel example-1 texto
+list-channels
+disconnect
+create-user hirohito@outlook.com 84r1Hg Mestre Hirohito
+create-user yoshio.taka@outlook.com 2Hg935 Yoshio Takahashi
+login hirohito@outlook.com 84r1Hg
+create-server hirohito-garden
+create-channel principal texto
+disconnect
+login yoshio.taka@outlook.com 2Hg936
+login yoshio.taka@outlook.com 2Hg935
+enter-server hirohito-garden
+enter-channel principal
+send-message Oh, grande mestre, conceda-me a sua sabedoria.
+disconnect
+login hirohito@outlook.com 84r1Hg
+enter-server hirohito-garden
+enter-channel principal
+send-message Pois não, meu nobre aprendiz.
+disconnect
+login yoshio.taka@outlook.com 2Hg935
+enter-server hirohito-garden
+enter-channel principal
+send-message Oh, grande mestre, eu preciso conquistar a joia de 4 almas.
+disconnect
+login hirohito@outlook.com 84r1Hg
+enter-server hirohito-garden
+enter-channel principal
+send-message Para conseguir a joia de 4 almas, você precisa evoluir a sua alma para um nível superior.
+disconnect
+login yoshio.taka@outlook.com 2Hg935
+enter-server hirohito-garden
+enter-channel principal
+send-message Como isso seria possível, mestre?
+disconnect
+login hirohito@outlook.com 84r1Hg
+enter-server hirohito-garden
+enter-channel principal
+send-message Você deve me conceder uma roda funcional, meu nobre rapaz.
+disconnect
+login yoshio.taka@outlook.com 2Hg935
+enter-server hirohito-garden
+enter-channel principal
+send-message Isso parece fácil. Hehe!
+disconnect
+login hirohito@outlook.com 84r1Hg
+enter-server hirohito-garden
+enter-channel principal
+send-message Mas não trata-se de qualquer roda, meu jovem.
+send-message Você terá que pegar essa rocha que pesa 40 quilogramas e esculpi-la com uma picareta até que ela se torne uma roda funcional.
+send-message Você terá que provar o seu valor com suor e sangue para ser merecedor da joia de 4 almas.
+list-messages
+disconnect
+login yoshio.taka@outlook.com 2Hg935
+enter-server hirohito-garden
+enter-channel principal
+send-message Droga! Eu estou ferrado, nunca conseguirei conquistar a joia de 4 almas.
+list-messages
+create-channel auxiliar voz
+list-channels
+disconnect
+create-user annajohansson@icloud.com 2rtwK9 Anna Johansson
+create-user larsandersson@outlook.com QdfU3B Lars Andersson
+create-user evakarlson@gmail.com c2Ak5a Eva Karlson
+create-user per.nilsson@outlook.com 8Bkfxd Per Nilsson
+create-user karlerikson@gmail.com ujDX6K Karl Erikson
+create-user janlarsson@outlook.com 2FmvDg Jan Larsson
+create-user arthemisgoddess@hotmail.com 2efPpATCeZsNUVFaLYcb38xGEaV9tSUgmsN9M4PMUYL4zZJps Arthemis the Goddess
+create-user nath@hotmail.com M9XyPwZBkvMEtKMz Nath
+create-user joaomartins@aol.com 1234567890 João Martins Papua Nova Guiné
+create-user jeanmartin@outlook.com pY8VbW Jean Martin
+create-user mariebernard@gmail.com hRU3rs Marie Bernard
+create-user michelrobert@yahoo.com 3TuFeB Michel Robert
+create-user clauderichard@icloud.com 92mhCV Claude Richard
+create-user dominiquedurand@gmail.com 43Mjhd Dominique Durand
+create-user philippedubois@yahoo.com Mrx8g7 Phillipe Dubois
+create-user antonioblanco@gmail.com TZYs4d Antonio Blanco
+create-user nellydias33@gmail.com x4PGjq Nelly Dias
+create-user javier.rivero@outlook.com y9m5KC Javier Rivero
+login joaomartins@hotmail.com 1234567890
+login joaomartins@hotmail.com 1235467890
+login joaomartins@aol.com 1235467890
+login joaomartins@aol.com 1234567890
+remove-server capybara
+remove-server inuyasha-fandom
+disconnect
+login annajohansson@icloud.com 2rtwK9
+leave-server
+create-server swedish-community
+set-server-invite-code swedish-community sverige
+disconnect
+login jeanmartin@outlook.com pY8VbW
+create-server french-community
+disconnect
+login philippedubois@yahoo.com Mrx8g7
+create-server french-community
+create-server french-community-1
+set-server-invite-code french-community croissant
+set-server-invite-code french-community-1 croissant
+set-server-desc french-community nous aimons des croissant
+set-server-desc french-community-1 nous aimons des croissant
+disconnect
+login antonioblanco@gmail.com TZYs4d
+create-server uruguayan-community
+enter-server swedish-community
+leave-server
+enter-server swedish-community
+disconnect
+login larsandersson@outlook.com QdfU3B
+enter-server swedish-community
+enter-server swedish-community sverige
+disconnect
+login larsandersson@outlook.com QdfU3B
+enter-server swedish-community
+enter-server swedish-community sverige
+list-participants
+disconnect
+login mariebernard@gmail.com hRU3rs
+enter-server french-community
+disconnect
+login nellydias@gmail.com x4PGjq
+login nellydias33@gmail.com x4PGjq
+enter-server uruguayan-community
+disconnect
+login evakarlson@gmail.com c2Ak5a
+enter-server swedish-community sverige
+disconnect
+login dominiquedurand@gmail.com 43Mjhd
+enter-server french-community-1 croissant
+disconnect
+login javier.rivero@outlook.com y9m5KC
+enter-server uruguayan-community
+list-participants
+disconnect
+login per.nilsson@outlook.com 8Bkfxd
+enter-server swedish-community sverige
+disconnect
+login michelrobert@yahoo.com 3TuFeB
+enter-server french-community
+leave-server
+enter-server french-community-1 croissant
+disconnect
+login karlerikson@gmail.com ujDX6K
+enter-server swedish-community sverige
+disconnect
+login clauderichard@icloud.com 92mhCV
+enter-server french-community
+list-participants
+leave-server
+enter-server french-community-1 croissant
+list-participants
+disconnect
+login janlarsson@outlook.com 2FmvDg
+list-servers
+enter-server swedish-community sverige
+disconnect
+login annajohansson@icloud.com 2rtwK9
+enter-server swedish-community
+list-participants
+list-servers
+disconnect
+login philippedubois@yahoo.com Mrx8g7
+list-participants
+set-server-desc french-community-1
+remove-server french-community
+remove-server french-community-1
+list-servers
+disconnect
+quit
+another-test
