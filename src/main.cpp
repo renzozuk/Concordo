@@ -1,13 +1,3 @@
-/**
- * @file main.cpp
- * @author Renzo Zukeram
- * @brief Implementação da leitura do script e dos comandos a serem executados pelo usuário.
- * @version 2.0
- * @date 2023-07-05
- * 
- * @copyright Copyright (c) 2023
- * 
- */
 #include <iostream>
 #include <fstream>
 #include <ctime>
@@ -20,13 +10,6 @@ using std::ifstream;
 
 static System sys;
 
-/**
- * @brief Divide uma string em duas partes no primeiro espaço encontrado.
- *
- * @param line A string de entrada a ser dividida.
- * @param isthefirst Flag indicando se deve retornar a primeira parte (verdadeiro) ou a segunda parte (falso).
- * @return A primeira ou segunda parte da string dividida.
- */
 string splitting(string line, bool isthefirst){
     size_t space = line.find(" ");
     if(isthefirst == true){
@@ -34,7 +17,7 @@ string splitting(string line, bool isthefirst){
         firstpart = line.substr(0, space);
         return firstpart;
     }else{
-        string secondpart; int spaces = 0;
+        int spaces = 0;
         for(int i=0; i<line.length(); i++){
             if(line[i] == ' '){
                 spaces++;
@@ -43,17 +26,11 @@ string splitting(string line, bool isthefirst){
         if(spaces == 0){
             return "";
         }
-        secondpart = line.substr(space + 1);
+        string secondpart = line.substr(space + 1);
         return secondpart;
     }
 }
 
-/**
- * @brief Verifica se uma string contém apenas espaços.
- *
- * @param name A string de entrada a ser verificada.
- * @return Verdadeiro se a string contém apenas espaços, falso caso contrário.
- */
 bool onlySpaces(string name){
     bool onlysp = true;
     for(int i=0; i<name.length(); i++){
@@ -64,11 +41,6 @@ bool onlySpaces(string name){
     return onlysp;
 }
 
-/**
- * @brief Trata o comando de cadastro de usuário.
- *
- * @param parameter A string de parâmetro contendo e-mail, senha e nome.
- */
 void signup(string parameter){
     int spaces = 0; string email, password, name; 
     for(int i=0; i<parameter.length(); i++){
@@ -113,59 +85,32 @@ void signup(string parameter){
     }
 }
 
-/**
- * @brief Trata o comando de login.
- *
- * @param parameter A string de parâmetro contendo e-mail e senha.
- * @return Verdadeiro se o login for bem-sucedido, falso caso contrário.
- */
 bool login(string parameter){
-    int spaces = 0; string email, password; bool tf;
-    for(int i=0; i<parameter.length(); i++){
-        if(parameter[i] == ' '){
-            spaces++;
-        }
-    }
-    if(spaces < 1){
+    if(parameter.length() == 0){
         cout << "Não há parâmetros suficientes para fazer login." << endl;
         return false;
     }else{
-        spaces = 0;
-        for(int i=0; i<parameter.length(); i++){
-            if(parameter[i] == ' ' && spaces < 1){
-                spaces++;
-            }else{
-                if(spaces == 0){
-                    email += parameter[i];
-                }else if(spaces == 1){
-                    password += parameter[i];
-                }
-            }
-        }
-        tf = sys.loggingIn(email, password);
+        string email = splitting(parameter, true);
+        string password = splitting(parameter, false);
+        bool tf = sys.loggingIn(email, password);
+        return tf;
     }
-    return tf;
 }
 
-/**
- * @brief Trata o comando de criação de servidor.
- *
- * @param name O nome do servidor a ser criado.
- */
 bool creatingServer(string name){
     bool tf;
     if(name.length() == 0){
         cout << "Não há parâmetros suficientes para criar um servidor." << endl;
         return false;
     }
-    bool istherespace = true;
+    bool istherespace = false;
     for(int i=0; i<name.size(); i++){
         if(name[i] == ' '){
-            istherespace = false;
+            istherespace = true;
         }
     }
-    if(istherespace == true){
-        tf = sys.addServerToSystem(name);
+    if(istherespace == false){
+        tf = sys.addServerToSystem(name, true);
         return tf;
     }else{
         cout << "Nome do servidor não pode ter espaço." << endl;
@@ -173,81 +118,30 @@ bool creatingServer(string name){
     }
 }
 
-/**
- * @brief Trata o comando de definição de descrição do servidor.
- *
- * @param parameter A string de parâmetro contendo o nome do servidor e a descrição.
- */
 void settingServerDescription(string parameter){
     if(parameter.length() == 0){
         cout << "Não há parâmetros suficientes para definir a descrição do servidor." << endl;
         return;
-    }
-    int spaces = 0; string name, description;
-    for(int i=0; i<parameter.length(); i++){
-        if(parameter[i] == ' '){
-            spaces++;
-        }
-    }
-    if(spaces < 1){
-        description = ""; name = parameter;
     }else{
-        spaces = 0;
-        for(int i=0; i<parameter.length(); i++){
-            if(parameter[i] == ' ' && spaces < 1){
-                spaces++;
-            }else{
-                if(spaces == 0){
-                    name += parameter[i];
-                }else if(spaces == 1){
-                    description += parameter[i];
-                }
-            }
-        }
+        string name = splitting(parameter, true);
+        string description = splitting(parameter, false);
+        sys.setServerDescription(name, description, true);
+        return;
     }
-    sys.setServerDescription(name, description);
 }
 
-/**
- * @brief Trata o comando de definição do código de convite do servidor.
- *
- * @param parameter A string de parâmetro contendo o nome do servidor e o código de convite.
- */
 void settingServerInviteCode(string parameter){
     if(parameter.length() == 0){
         cout << "Não há parâmetros suficientes para definir o código de convite do servidor." << endl;
         return;
-    }
-    int spaces = 0; string name, ic;
-    for(int i=0; i<parameter.length(); i++){
-        if(parameter[i] == ' '){
-            spaces++;
-        }
-    }
-    if(spaces < 1){
-        ic = ""; name = parameter;
     }else{
-        spaces = 0;
-        for(int i=0; i<parameter.length(); i++){
-            if(parameter[i] == ' ' && spaces < 1){
-                spaces++;
-            }else{
-                if(spaces == 0){
-                    name += parameter[i];
-                }else if(spaces == 1){
-                    ic += parameter[i];
-                }
-            }
-        }
+        string name = splitting(parameter, true);
+        string ic = splitting(parameter, false);
+        sys.setServerInviteCode(name, ic, true);
+        return;
     }
-    sys.setServerInviteCode(name, ic);
 }
 
-/**
- * @brief Trata o comando de remoção de servidor.
- *
- * @param parameter O nome do servidor a ser removido.
- */
 void removingServer(string parameter){
     if(parameter.length() == 0){
         cout << "Não há parâmetros suficientes para remover o servidor." << endl;
@@ -260,25 +154,16 @@ bool enteringServer(string parameter){
     bool tf;
     string name = splitting(parameter, true);
     string ic = splitting(parameter, false);
-    tf = sys.enteringServer(name, ic);
+    tf = sys.enteringServer(name, ic, true);
     return tf;
 }
 
-/**
- * @brief Cria um canal com base nos parâmetros fornecidos.
- *
- * Esta função cria um canal com base nos parâmetros fornecidos, que incluem o nome do canal e o tipo do canal.
- * O tipo do canal pode ser "texto" ou "voz".
- *
- * @param parameter Uma string contendo os parâmetros necessários para criar o canal.
- */
 void creatingChannel(string parameter){
     if (parameter.length() == 0) {
         cout << "Não há parâmetros suficientes para criar o canal." << endl;
         return;
     }
-    int spaces = 0;
-
+    /*int spaces = 0;
     for (int i = 0; i < parameter.length(); i++) {
         if (parameter[i] == ' ') {
             spaces++;
@@ -287,7 +172,7 @@ void creatingChannel(string parameter){
     if(spaces == 0){
         cout << "Não há parâmetros suficientes para criar o canal." << endl;
         return;
-    }
+    }*/
     string name, type;
     name = splitting(parameter, true);
     type = splitting(parameter, false);
@@ -295,20 +180,12 @@ void creatingChannel(string parameter){
         cout << "Tipo inválido!" << endl;
         return;
     }else if(type == "texto"){
-        sys.newChannel(name, true);
+        sys.newChannel(name, true, true);
     }else if(type == "voz"){
-        sys.newChannel(name, false);
+        sys.newChannel(name, false, true);
     }
 }
 
-/**
- * @brief Entra em um canal existente.
- *
- * Esta função permite que o usuário entre em um canal existente com base no parâmetro fornecido.
- *
- * @param parameter Uma string contendo o parâmetro necessário para entrar no canal.
- * @return Um valor booleano indicando se a entrada no canal foi bem-sucedida ou não.
- */
 bool enteringChannel(string parameter, bool changing){
     bool tf;
     if(parameter == ""){
@@ -320,27 +197,6 @@ bool enteringChannel(string parameter, bool changing){
     return tf;
 }
 
-/**
- * @brief Lê e processa os comandos do usuário.
- *
- * @param commands O vetor contendo os comandos do script fornecido pelo usuário.
- * @param choice O comando recebido do arquivo ou digitado pelo usuário.
- * @param parameter Reune os parâmetros do comando digitado pelo usuário.
- * @param tf Um boolean auxiliar para algumas situações específicas.
- * @param logstage Verifica em qual nível de acesso o usuário está. Por exemplo: Quando logstage = 0: usuário não logado; Quando logstage = 1: usuário logado; Quando logstage = 2: usuário logado e visualizando um servidor; Quando logstage = 3: usuário logado, visualizando um servidor e visualizando um canal.
- * 
- */
-/*void readingCommands(vector<string> commands){
-    
-}*/
-
-/**
- * @brief Função principal do aplicativo Concordo.
- *
- * @param argc O número de argumentos a serem recebidos.
- * @param argv Um array composto pelos argumentos recebidos.
- * @return O status de saída do aplicativo.
- */
 int main(int argc, char* argv[]){
     system("clear");
     cout << "「「「 Bem-vindo ao concordo! 」」」" << endl;
@@ -355,6 +211,7 @@ int main(int argc, char* argv[]){
     }
     string choice, parameter, temp; bool tf; int i = 0, logstage = 0;
     do{
+        sys.load();
         if(i < commands.size()){
             choice = splitting(commands[i], true);
             parameter = splitting(commands[i], false);
@@ -369,9 +226,6 @@ int main(int argc, char* argv[]){
         }else{
             if(choice == "list-servers"){
                 sys.listServers();
-            }
-            if(logstage > 3 || logstage < 0){
-                logstage = 0;
             }
             if(logstage == 0){
                 if(choice == "create-user"){
@@ -464,10 +318,12 @@ int main(int argc, char* argv[]){
                     }else if(logstage == 2){
                         cout << "Você deve estar em um canal para poder executar isso." << endl;
                     }else if(logstage == 3){
-                        char date[80]; struct tm *p;
+                        char datetime[80]; struct tm *p;
                         time_t seconds; time(&seconds);
-                        p = localtime(&seconds); strftime(date, 80, "<%d/%m/%Y - %X>", p);
-                        sys.sendingMessage(date, parameter);
+                        p = localtime(&seconds); strftime(datetime, 80, "<%d/%m/%Y - %X>", p);
+                        if(parameter != ""){
+                            sys.sendingMessage(datetime, parameter);
+                        }
                     }
                 }else if(choice == "list-messages"){
                     if(logstage == 1){
@@ -480,6 +336,7 @@ int main(int argc, char* argv[]){
                 }
             }
         }
+        sys.save();
     }while(choice != "quit");
     sys.ChannelsDestroyer();
     cout << "「「「 Saindo do Concordo... Até mais! 」」」" << endl;

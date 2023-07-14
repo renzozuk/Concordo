@@ -1,51 +1,46 @@
-/**
- * @file system.cpp
- * @author Renzo Zukeram
- * @brief Implementação da classe System.
- * @version 2.0
- * @date 2023-07-05
- * 
- * @copyright Copyright (c) 2023
- * 
- */
 #include <iostream>
+#include <fstream>
+#include <cmath>
 #include <system.h>
 
 using std::cin;
 using std::cout;
 using std::endl;
+using std::pow;
+using std::ifstream;
+using std::ofstream;
 
 void System::ChannelsDestroyer(){
-    for(int i=0; i<servers.size(); i++){
+    for(int i = 0; i < servers.size(); i++){
         servers[i].ChannelsDestroyer();
     }
 }
 
-//start users
-/**
- * @brief Obtém o usuário atualmente logado no sistema.
- *
- * @return O usuário atualmente logado.
- */
-User System::getLoggedInUser(){
-    return this->currentLoggedInUser;
+int System::getIntByString(string befn){
+    int aftn = 0;
+    for (int i = 0; i < befn.length(); i++) {
+        aftn += (befn[befn.length()-1-i]-'0') * pow(10, i);
+    }
+    return aftn;
 }
 
-/**
- * @brief Define o usuário atualmente logado no sistema.
- *
- * @param currentLoggedInUser O usuário atualmente logado.
- */
+//start users
 void System::setLoggedInUser(User currentLoggedInUser){
     this->currentLoggedInUser = currentLoggedInUser;
 }
 
-/**
- * @brief Obtém o nome de usuário correspondente a um determinado ID.
- *
- * @param id O ID do usuário.
- * @return O nome do usuário correspondente ao ID.
- */
+/*User System::getLoggedInUser(){
+    return this->currentLoggedInUser;
+}*/
+
+void System::setLoggedInUserById(int id){
+    for(int i = 0; i < users.size(); i++){
+        if(users[i].getId() == id){
+            this->currentLoggedInUser = users[i];
+        }
+    }
+}
+
 string System::getUserNameById(int id){
     string name;
     for(int i=0; i<users.size(); i++){
@@ -56,17 +51,10 @@ string System::getUserNameById(int id){
     return name;
 }
 
-/**
- * @brief Verifica se já existe um usuário com o mesmo e-mail no sistema.
- *
- * @param newemail O novo e-mail a ser verificado.
- * @return Verdadeiro se o e-mail já existir, falso caso contrário.
- */
 bool System::alExistUser(string newemail){
-    bool isequal = false; string emailinsys;
+    bool isequal = false;
     for(int i=0; i<users.size(); i++){
-        emailinsys = users[i].getEmail();
-        if(newemail == emailinsys){
+        if(newemail == users[i].getEmail()){
             isequal = true;
             break;
         }
@@ -74,16 +62,8 @@ bool System::alExistUser(string newemail){
     return isequal;
 }
 
-/**
- * @brief Adiciona um usuário ao sistema.
- *
- * @param email O e-mail do usuário.
- * @param password A senha do usuário.
- * @param name O nome do usuário.
- */
 void System::addUserToSystem(const string& email, const string& password, const string& name){
-    bool alexist = System::alExistUser(email);
-    if(alexist == true){
+    if(System::alExistUser(email) == true){
         cout << "Usuário já existe!" << endl;
     }else{
         int size_ = users.size() + 1;
@@ -93,22 +73,13 @@ void System::addUserToSystem(const string& email, const string& password, const 
     }   
 }
 
-/**
- * @brief Faz o login de um usuário no sistema.
- *
- * @param email O e-mail do usuário.
- * @param password A senha do usuário.
- * @return Verdadeiro se o login for bem-sucedido, falso caso contrário.
- */
 bool System::loggingIn(string email, string password){
-    string emailinsys, passwordinsys, name;
     for(int i=0; i<users.size(); i++){
-        emailinsys = users[i].getEmail(); passwordinsys = users[i].getPassword();
-        if(email == emailinsys && password == passwordinsys){
+        if(email == users[i].getEmail() && password == users[i].getPassword()){
             cout << "Usuário logado como " << email << endl;
             System::setLoggedInUser(users[i]);
             return true;
-        }else if(email == emailinsys && password != passwordinsys){
+        }else if(email == users[i].getEmail() && password != users[i].getPassword()){
             cout << "Senha incorreta." << endl;
             return false;
         }
@@ -117,46 +88,21 @@ bool System::loggingIn(string email, string password){
     return false;
 }
 
-/**
- * @brief Desconecta o usuário atualmente logado no sistema.
- */
 void System::disconnect(){
     for(int i=0; i<users.size(); i++){
         if(users[i].getId() == currentLoggedInUser.getId()){
             cout << "Desconectando usuário... " << endl;
         }
     }
-    System::setLoggedInUser(User());
-    System::setCurrentServer(Server());
-    System::setCurrentChannel(Channel());
+    System::setLoggedInUser(User()); System::setCurrentServer(Server()); System::setCurrentChannel(Channel());
 }
 //end users
 
 //start servers
-/**
- * @brief Obtém o servidor atualmente selecionado.
- *
- * @return O servidor atualmente selecionado.
- */
-Server System::getCurrentServer(){
-    return this->currentServer;
-}
-
-/**
- * @brief Define o servidor atualmente selecionado.
- *
- * @param currentServer O servidor atualmente selecionado.
- */
 void System::setCurrentServer(Server currentServer){
     this->currentServer = currentServer;
 }
 
-/**
- * @brief Verifica se já existe um servidor com o mesmo nome no sistema.
- *
- * @param newname O novo nome do servidor.
- * @return Verdadeiro se o servidor já existir, falso caso contrário.
- */
 bool System::alExistServer(string newname){
     bool isequal = false;
     for(int i=0; i<servers.size(); i++){
@@ -168,47 +114,43 @@ bool System::alExistServer(string newname){
     return isequal;
 }
 
-/**
- * @brief Adiciona um servidor ao sistema.
- *
- * @param name O nome do servidor.
- */
-bool System::addServerToSystem(string name){
+bool System::addServerToSystem(string name, bool toPrint){
     bool alexist = System::alExistServer(name);
     if(alexist == false){
         Server srv(currentLoggedInUser.getId(), name);
         servers.push_back(srv);
-        cout << "Servidor criado." << endl;
-        System::enteringServer(name, "");
+        if(toPrint == true){
+            cout << "Servidor criado." << endl;
+        }
+        System::enteringServer(name, "", false);
         return true;
     }else{
-        cout << "Servidor com esse nome já existe." << endl;
+        if(toPrint == true){
+            cout << "Servidor com esse nome já existe." << endl;
+        }
         return false;
     }
 }
 
-/**
- * @brief Define a descrição de um servidor.
- *
- * @param name O nome do servidor.
- * @param desc A nova descrição do servidor.
- */
-void System::setServerDescription(string name, string desc){
+void System::setServerDescription(string name, string desc, bool toPrint){
     bool found = false;
     for(int i=0; i<servers.size(); i++){
         if(name == servers[i].getName()){
             found = true;
             if(currentLoggedInUser.getId() == servers[i].getOwnerId()){
                 servers[i].setDescription(desc);
-                cout << "Descrição do servidor '" << name;
-                if(desc != ""){
-                    cout << "' modificada!" << endl;
-                }else{
-                    cout << "' removida!" << endl;
+                if(toPrint == true){
+                    cout << "Descrição do servidor '" << name;
+                    if(desc != ""){
+                        cout << "' modificada!" << endl;
+                    }else{
+                        cout << "' removida!" << endl;
+                    }
                 }
-                
             }else{
-                cout << "Você não pode alterar a descrição de um servidor que não foi criado por você." << endl;
+                if(toPrint == true){
+                    cout << "Você não pode alterar a descrição de um servidor que não foi criado por você." << endl;
+                }
             }
         }
     }
@@ -217,28 +159,25 @@ void System::setServerDescription(string name, string desc){
     }
 }
 
-/**
- * @brief Define o código de convite de um servidor.
- *
- * @param name O nome do servidor.
- * @param ic O novo código de convite.
- */
-void System::setServerInviteCode(string name, string ic){
+void System::setServerInviteCode(string name, string ic, bool toPrint){
     bool found = false;
     for(int i=0; i<servers.size(); i++){
         if(name == servers[i].getName()){
             found = true;
             if(currentLoggedInUser.getId() == servers[i].getOwnerId()){
                 servers[i].setInviteCode(ic);
-                cout << "Código de convite do servidor '" << name;
-                if(ic.length() != 0){
-                    cout << "' modificado!" << endl;
-                }else{
-                    cout << "' removido!" << endl;
+                if(toPrint == true){
+                    cout << "Código de convite do servidor '" << name;
+                    if(ic.length() != 0){
+                        cout << "' modificado!" << endl;
+                    }else{
+                        cout << "' removido!" << endl;
+                    }
                 }
-                
             }else{
-                cout << "Você não pode alterar o código de convite de um servidor que não foi criado por você." << endl;
+                if(toPrint == true){
+                    cout << "Você não pode alterar o código de convite de um servidor que não foi criado por você." << endl;
+                }
             }
         }
     }
@@ -247,9 +186,6 @@ void System::setServerInviteCode(string name, string ic){
     }
 }
 
-/**
- * @brief Lista os servidores disponíveis no sistema.
- */
 void System::listServers(){
     if(servers.size() == 0){
         cout << "Não há nenhum server no sistema." << endl;
@@ -262,11 +198,6 @@ void System::listServers(){
     }
 }
 
-/**
- * @brief Remove um servidor do sistema.
- *
- * @param name O nome do servidor a ser removido.
- */
 void System::removeServer(string name){
     bool found = false;
     for(int i=0; i<servers.size(); i++){
@@ -285,74 +216,40 @@ void System::removeServer(string name){
     }
 }
 
-/**
- * @brief Realiza a entrada de um usuário em um servidor.
- *
- * @param name O nome do server após o tratamento.
- * @param ic O invite-code após o tratamento.
- * @param parameter O comando de entrada, que contém o nome do servidor e pode conter o código de convite separados por espaço.
- * @return Verdadeiro se a entrada for bem-sucedida, falso caso contrário.
- */
-bool System::enteringServer(string name, string ic){
-    int spaces = 0; /*string name, ic;*/ bool found = false;
-    //começo do tratamento do parâmetro
-    /*for(int i=0; i<parameter.length(); i++){
-        if(parameter[i] == ' '){
-            spaces++;
-        }
-    }
-    if(spaces < 1){
-        ic = ""; name = parameter;
-    }else{
-        spaces = 0;
-        for(int i=0; i<parameter.length(); i++){
-            if(parameter[i] == ' ' && spaces < 1){
-                spaces++;
-            }else{
-                if(spaces == 0){
-                    name += parameter[i];
-                }else if(spaces == 1){
-                    ic += parameter[i];
-                }
-            }
-        }
-    }*/
-    //fim do tratamento do parâmetro
-    //começo da busca pelo servidor
+bool System::enteringServer(string name, string ic, bool toPrint){
+    bool found = false;
     for(int i=0; i<servers.size(); i++){
         if(name == servers[i].getName()){
             found = true;
             if(ic == servers[i].getInviteCode() || currentLoggedInUser.getId() == servers[i].getOwnerId() || servers[i].getInviteCode() == ""){
                 servers[i].enteringServer(currentLoggedInUser.getId());
                 System::setCurrentServer(servers[i]);
-                cout << "Entrou no servidor '"<< servers[i].getName() <<"' com sucesso." << endl;
+                if(toPrint == true){
+                    cout << "Entrou no servidor '"<< servers[i].getName() <<"' com sucesso." << endl;
+                }
                 return true;
             }else if(ic == "" && servers[i].getInviteCode() != ""){
-                cout << "Servidor requer código de convite." << endl;
+                if(toPrint == true){
+                    cout << "Servidor requer código de convite." << endl;
+                }
             }else if(servers[i].getInviteCode() != "" && ic != "" && ic != ""){
-                cout << "Código de convite incorreto. Verifique se os dados inseridos estão corretos e tente novamente." << endl;
+                if(toPrint == true){
+                    cout << "Código de convite incorreto. Verifique se os dados inseridos estão corretos e tente novamente." << endl;
+                }
             }
         }
     }
-    //fim da busca pelo servidor
     if(found == false){
         cout << "Servidor não encontrado." << endl;
     }
     return false;
 }
 
-/**
- * @brief Realiza a saída de um servidor.
- */
 void System::leavingServer(bool toprint){
     cout << "Saindo do servidor '" << currentServer.getName() << "'." << endl;
-    System::setCurrentServer(Server());
-    System::setCurrentChannel(Channel());
+    System::setCurrentServer(Server()); System::setCurrentChannel(Channel());
 }
 
-/**
- * @brief Lista os participantes do servidor atual.
- */
 void System::listParticipants(){
     int* membersid;
     for(int i=0; i<servers.size(); i++){
@@ -370,30 +267,18 @@ void System::listParticipants(){
 //end servers
 
 //start channels
-/**
- * Define o canal atual do sistema.
- * @param currentChannel O canal a ser definido como atual.
- */
 void System::setCurrentChannel(Channel currentChannel){
     this->currentChannel = currentChannel;
 }
 
-/**
- * Cria um novo canal no servidor atual.
- * @param name O nome do novo canal.
- * @param isText Indica se o canal é um canal de texto (true) ou de voz (false).
- */
-void System::newChannel(string name, bool isText){
+void System::newChannel(string name, bool isText, bool toPrint){
     for(int i=0; i<servers.size(); i++){
         if(currentServer.getName() == servers[i].getName()){
-            servers[i].addChannelToServer(name, isText);
+            servers[i].addChannelToServer(name, isText, toPrint);
         }
     }
 }
 
-/**
- * Imprime a lista de canais do servidor atual.
- */
 void System::printChannels(){
     for(int i=0; i<servers.size(); i++){
         if(currentServer.getName() == servers[i].getName()){
@@ -404,12 +289,6 @@ void System::printChannels(){
     }
 }
 
-/**
- * Entra em um canal especificado.
- * @param name O nome do canal a ser acessado.
- * @param changing Indica se a entrada está sendo realizada como uma mudança de canal.
- * @return true se o canal existir e a entrada for bem-sucedida, false caso contrário.
- */
 bool System::enteringChannel(string name, bool changing){
     bool found;
     for(int i=0; i<servers.size(); i++){
@@ -437,19 +316,11 @@ bool System::enteringChannel(string name, bool changing){
     return found;
 }
 
-/**
- * Sai do canal atual.
- */
 void System::leavingChannel(){
     cout << "Saindo do canal." << endl;
     System::setCurrentChannel(Channel());
 }
 
-/**
- * Envia uma mensagem para o canal atual.
- * @param date A data da mensagem.
- * @param content O conteúdo da mensagem.
- */
 void System::sendingMessage(string date, string content){
     for(int i=0; i<servers.size(); i++){
         if(currentServer.getName() == servers[i].getName()){
@@ -459,9 +330,6 @@ void System::sendingMessage(string date, string content){
     }
 }
 
-/**
- * Imprime as mensagens do canal atual.
- */
 void System::printMessages(){
     for(int i=0; i<servers.size(); i++){
         if(currentServer.getName() == servers[i].getName()){
@@ -471,22 +339,174 @@ void System::printMessages(){
                     cout << "Sem mensagens para exibir." << endl;
                     return;
                 }
-                //cout << servers[i].getQuantMessages(currentChannel.getName()) << endl;
                 for(int j=0; j<servers[i].getQuantMessages(currentChannel.getName()); j++){
                     atualid = servers[i].getSpecificMessageSentBy(currentChannel.getName(), j);
                     datetime = servers[i].getSpecificMessageDateTime(currentChannel.getName(), j);
                     content = servers[i].getSpecificMessageContent(currentChannel.getName(), j);
                     sentBy = getUserNameById(atualid);
-                    cout << sentBy << "<" << datetime << ">: " << content << endl;
+                    cout << sentBy << datetime << ": " << content << endl;
                 }
             }else if(servers[i].getChannelType(currentChannel.getName()) == "voice"){
                 if(servers[i].getLastMessageContent(currentChannel.getName()) == ""){
                     cout << "Sem mensagens para exibir." << endl;
                     return;
                 }
-                cout << getUserNameById(servers[i].getLastMessageSentBy(currentChannel.getName())) << "<" << servers[i].getLastMessageDateTime(currentChannel.getName()) << ">: " << servers[i].getLastMessageContent(currentChannel.getName()) << endl;
+                cout << getUserNameById(servers[i].getLastMessageSentBy(currentChannel.getName())) << servers[i].getLastMessageDateTime(currentChannel.getName()) << ": " << servers[i].getLastMessageContent(currentChannel.getName()) << endl;
             }
         }
     }
 }
 //end channels
+
+//start disk-data
+void System::saveUsers(){
+    ofstream UsersFile("usuarios.txt");
+    UsersFile << users.size() << "\n";
+    for(int i = 0; i < users.size(); i++){
+        UsersFile << users[i].getId() << "\n";
+        UsersFile << users[i].getName() << "\n";
+        UsersFile << users[i].getEmail() << "\n";
+        UsersFile << users[i].getPassword() << "\n";
+    }
+    UsersFile.close();
+}
+
+void System::saveServers(){
+    ofstream ServersFile("servidores.txt");
+    ServersFile << servers.size() << "\n";
+    for(int i = 0; i < servers.size(); i++){
+        ServersFile << servers[i].getOwnerId() << "\n";
+        ServersFile << servers[i].getName() << "\n";
+        ServersFile << servers[i].getDescription() << "\n";
+        ServersFile << servers[i].getInviteCode() << "\n";
+        ServersFile << servers[i].getQuantMembers() << "\n";
+        for(int j = 0; j < servers[i].getQuantMembers(); j++){
+            ServersFile << servers[i].getSpecificMemberIdByPosition(j) << "\n";
+        }
+        ServersFile << servers[i].getQuantChannels() << "\n";
+        for(int j = 0; j < servers[i].getQuantChannels(); j++){
+            ServersFile << servers[i].getChannelNameByPosition(j) << "\n";
+            ServersFile << servers[i].getChannelType(servers[i].getChannelNameByPosition(j)) << "\n";
+            if(servers[i].getChannelType(servers[i].getChannelNameByPosition(j)) == "text"){
+                ServersFile << servers[i].getQuantMessages(servers[i].getChannelNameByPosition(j)) << "\n";
+                for(int k = 0; k < servers[i].getQuantMessages(servers[i].getChannelNameByPosition(j)); k++){
+                    ServersFile << servers[i].getSpecificMessageSentBy(servers[i].getChannelNameByPosition(j), k) << "\n";
+                    ServersFile << servers[i].getSpecificMessageDateTime(servers[i].getChannelNameByPosition(j), k) << "\n";
+                    ServersFile << servers[i].getSpecificMessageContent(servers[i].getChannelNameByPosition(j), k) << "\n";
+                }
+            }else if(servers[i].getChannelType(servers[i].getChannelNameByPosition(j)) == "voice"){
+                if(servers[i].getLastMessageSentBy(servers[i].getChannelNameByPosition(j)) == 0){
+                    ServersFile << 0 << "\n";
+                }else{
+                    ServersFile << 1 << "\n";
+                    ServersFile << servers[i].getLastMessageSentBy(servers[i].getChannelNameByPosition(j)) << "\n";
+                    ServersFile << servers[i].getLastMessageDateTime(servers[i].getChannelNameByPosition(j)) << "\n";
+                    ServersFile << servers[i].getLastMessageContent(servers[i].getChannelNameByPosition(j)) << "\n";
+                }
+            }
+        }
+    }
+}
+
+void System::save(){
+    System::saveUsers();
+    System::saveServers();
+}
+
+void System::loadUsers(){
+    ifstream UsersFile("usuarios.txt");
+    if(UsersFile.good()){
+        vector<string> lines; string temp;
+        while(getline(UsersFile, temp)){
+            lines.push_back(temp);
+        }
+        UsersFile.close();
+        bool alexist;
+        for(int i = 0; i < System::getIntByString(lines[0]); i++){
+            alexist = System::alExistUser(lines[i*4+3]);
+            if(alexist == false){
+                User usr(System::getIntByString(lines[i*4+1]), lines[i*4+3], lines[4*(i+1)], lines[i*4+2]);
+                users.push_back(usr);
+            }
+        }
+    }
+}
+
+void System::loadServers(){
+    ifstream ServersFile("servidores.txt");
+    if(ServersFile.good()){
+        servers.clear();
+        vector<string> lines; string temp, temp1;
+        while(getline(ServersFile, temp)){
+            lines.push_back(temp);
+        }
+        ServersFile.close(); int i = 1;
+        while(i < lines.size()){
+            System::setLoggedInUserById(System::getIntByString(lines[i])); i++;
+            System::addServerToSystem(lines[i], false);
+            System::setServerDescription(lines[i], lines[i+1], false);
+            System::setServerInviteCode(lines[i], lines[i+2], false);
+            i += 3;
+            for(int j = 0; j < System::getIntByString(lines[i]); j++){ //reading members
+                System::setLoggedInUserById(System::getIntByString(lines[i+j+1]));
+                System::enteringServer(lines[i-3], lines[i-1], false); temp = lines[i-3]; temp1 = lines[i-1];
+            }
+            i += (System::getIntByString(lines[i])+1);
+            int quanttemp = System::getIntByString(lines[i]), quanttemp1; Channel tempch;
+            if(System::getIntByString(lines[i]) == 0){
+                i++;
+            }
+            for(int j = 0; j < quanttemp; j++){ //reading channels
+                if(j == 0){
+                    i++;
+                }
+                if(lines[i+1] == "text"){
+                    System::newChannel(lines[i], true, false); temp1 = lines[i];
+                    tempch = currentServer.getChannel(lines[i+1]); i += 2;
+                    if(System::getIntByString(lines[i]) == 0){
+                        i++;
+                    }
+                    quanttemp1 = System::getIntByString(lines[i]);
+                    for(int k = 0; k < quanttemp1; k++){ //reading messages-tc
+                        if(k == 0){
+                            i++;
+                        }
+                        System::setLoggedInUserById(System::getIntByString(lines[i]));
+                        for(int l = 0; l < servers.size(); l++){
+                            System::setCurrentServer(servers[l]);
+                            if(servers[l].getName() == temp){
+                                this->currentChannel = servers[l].getChannel(temp1);
+                            }
+                        }
+                        System::sendingMessage(lines[i+1], lines[i+2]);
+                        i += 3;
+                    }
+                }else if(lines[i+1] == "voice"){
+                    System::newChannel(lines[i], false, false); temp1 = lines[i];
+                    tempch = currentServer.getChannel(lines[i+1]); i += 2;
+                    if(System::getIntByString(lines[i]) == 0){
+                        i++;
+                    }else if(System::getIntByString(lines[i]) == 1){ //reading messages-vc
+                        i++;
+                        System::setLoggedInUserById(System::getIntByString(lines[i]));
+                        for(int l = 0; l < servers.size(); l++){
+                            System::setCurrentServer(servers[l]);
+                            if(servers[l].getName() == temp){
+                                this->currentChannel = servers[l].getChannel(temp1);
+                            }
+                        }
+                        System::sendingMessage(lines[i+1], lines[i+2]);
+                        i += 3;
+                    }
+                }
+            }
+        }
+        System::setLoggedInUser(User()); System::setCurrentServer(Server()); System::setCurrentChannel(Channel());
+    }
+}
+
+void System::load(){
+    System::loadUsers();
+    //System::loadServers();
+}
+//end disk-data

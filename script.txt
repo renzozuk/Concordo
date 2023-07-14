@@ -41,10 +41,12 @@ create-channel example-6 voz
 create-channel example-7 texto
 create-channel example-8 voz
 create-channel example-1 texto
+create-channel example-1 voz
 list-channels
 disconnect
 create-user hirohito@outlook.com 84r1Hg Mestre Hirohito
 create-user yoshio.taka@outlook.com 2Hg935 Yoshio Takahashi
+create-user kasumi.yama@gmail.com 7jNDrW Kasumi Yamaguchi
 login hirohito@outlook.com 84r1Hg
 create-server hirohito-garden
 create-channel principal texto
@@ -100,6 +102,49 @@ send-message Droga! Eu estou ferrado, nunca conseguirei conquistar a joia de 4 a
 list-messages
 create-channel auxiliar voz
 list-channels
+leave-server
+create-server cafofo-do-yoshio
+create-channel sala texto
+create-channel cozinha texto
+create-channel quarto texto
+create-channel banheiro voz
+create-channel quintal texto
+disconnect
+login kasumi.yama@gmail.com 7jNDrW
+enter-server cafofo-do-yoshio
+enter-channel quintal
+send-message Por que você está se esforçando tanto para quebrar essa pedra enorme?
+disconnect
+login yoshio.taka@outlook.com 2Hg935
+enter-server cafofo-do-yoshio
+enter-channel quintal
+send-message Aquele velho bocó disse que eu só conseguiria a joia de 4 almas se transformasse essa pedra em uma roda funcional.
+disconnect
+login kasumi.yama@gmail.com 7jNDrW
+enter-server cafofo-do-yoshio
+enter-channel quintal
+send-message Você não acreditou nele, né? Essa joia de 4 almas nem sequer existe.
+disconnect
+login yoshio.taka@outlook.com 2Hg935
+enter-server cafofo-do-yoshio
+enter-channel quintal
+send-message Ela existe sim! Eu vou conseguir ela e esfregar na cara de todo mundo que duvidou de mim!
+disconnect
+login kasumi.yama@gmail.com 7jNDrW
+enter-server cafofo-do-yoshio
+enter-channel quintal
+send-message Mas por que você quer tanto essa suposta joia de 4 almas?
+disconnect
+login yoshio.taka@outlook.com 2Hg935
+enter-server cafofo-do-yoshio
+enter-channel quintal
+send-message Eu... Eu... Eu não sei...
+disconnect
+login kasumi.yama@gmail.com 7jNDrW
+enter-server cafofo-do-yoshio
+enter-channel quintal
+send-message Tá vendo! Você está lutando por um objetivo, mas sequer tem um propósito.
+list-messages
 disconnect
 create-user annajohansson@icloud.com 2rtwK9 Anna Johansson
 create-user larsandersson@outlook.com QdfU3B Lars Andersson
@@ -107,8 +152,6 @@ create-user evakarlson@gmail.com c2Ak5a Eva Karlson
 create-user per.nilsson@outlook.com 8Bkfxd Per Nilsson
 create-user karlerikson@gmail.com ujDX6K Karl Erikson
 create-user janlarsson@outlook.com 2FmvDg Jan Larsson
-create-user arthemisgoddess@hotmail.com 2efPpATCeZsNUVFaLYcb38xGEaV9tSUgmsN9M4PMUYL4zZJps Arthemis the Goddess
-create-user nath@hotmail.com M9XyPwZBkvMEtKMz Nath
 create-user joaomartins@aol.com 1234567890 João Martins Papua Nova Guiné
 create-user jeanmartin@outlook.com pY8VbW Jean Martin
 create-user mariebernard@gmail.com hRU3rs Marie Bernard
