@@ -1,9 +1,0 @@
-<map id="include/server.h" name="include/server.h">
-<area shape="rect" id="node1" title=" " alt="" coords="151,5,276,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,64,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="245,229,307,256"/>
-<area shape="rect" id="node4" href="$textchannel_8h.html" title=" " alt="" coords="89,80,199,107"/>
-<area shape="rect" id="node7" href="$voicechannel_8h.html" title=" " alt="" coords="224,80,344,107"/>
-<area shape="rect" id="node5" href="$channel_8h.html" title=" " alt="" coords="128,155,213,181"/>
-<area shape="rect" id="node6" href="$message_8h.html" title=" " alt="" coords="237,155,331,181"/>
-</map>

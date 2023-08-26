@@ -1,4 +1,0 @@
-<map id="System::alExistServer" name="System::alExistServer">
-<area shape="rect" id="node1" title="Verifica se já existe um servidor com o mesmo nome no sistema." alt="" coords="261,5,427,32"/>
-<area shape="rect" id="node2" href="$classSystem.html#aad6e5658dc8c78f4118ba16d500ec3ef" title="Adiciona um servidor ao sistema." alt="" coords="5,5,213,32"/>
-</map>

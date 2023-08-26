@@ -1,7 +1,0 @@
-<map id="System::setCurrentServer" name="System::setCurrentServer">
-<area shape="rect" id="node1" title="Define o servidor atualmente selecionado." alt="" coords="484,56,673,83"/>
-<area shape="rect" id="node2" href="$classSystem.html#a66379777d789c071beb96b3b0253f212" title="Desconecta o usuário atualmente logado no sistema." alt="" coords="274,5,423,32"/>
-<area shape="rect" id="node3" href="$classSystem.html#a91eb3a9c2a7515774393b018e77e6d55" title="Realiza a entrada de um usuário em um servidor." alt="" coords="261,56,436,83"/>
-<area shape="rect" id="node5" href="$classSystem.html#a6ae6d7b3a484e1dbfde2d270c839792c" title="Realiza a saída de um servidor." alt="" coords="264,107,433,133"/>
-<area shape="rect" id="node4" href="$classSystem.html#aad6e5658dc8c78f4118ba16d500ec3ef" title="Adiciona um servidor ao sistema." alt="" coords="5,56,213,83"/>
-</map>

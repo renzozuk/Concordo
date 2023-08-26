@@ -1,4 +1,0 @@
-<map id="System::addUserToSystem" name="System::addUserToSystem">
-<area shape="rect" id="node1" title="Adiciona um usuário ao sistema." alt="" coords="5,5,201,32"/>
-<area shape="rect" id="node2" href="$classSystem.html#a114ea1f48109814c933923039fdd6338" title="Verifica se já existe um usuário com o mesmo e&#45;mail no sistema." alt="" coords="249,5,403,32"/>
-</map>

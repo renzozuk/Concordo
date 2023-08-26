@@ -1,5 +1,0 @@
-<map id="System::enteringServer" name="System::enteringServer">
-<area shape="rect" id="node1" title="Realiza a entrada de um usuário em um servidor." alt="" coords="5,31,180,57"/>
-<area shape="rect" id="node2" href="$classUser.html#a010077fcd52d32fd3b4e1171f748a86a" title="Obtém o ID do usuário." alt="" coords="276,5,369,32"/>
-<area shape="rect" id="node3" href="$classSystem.html#ad1de91e5ec17795f2994de4ee0635bc1" title="Define o servidor atualmente selecionado." alt="" coords="228,56,417,83"/>
-</map>

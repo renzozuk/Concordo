@@ -1,6 +1,0 @@
-<map id="System::leavingServer" name="System::leavingServer">
-<area shape="rect" id="node1" title="Realiza a saída de um servidor." alt="" coords="5,56,175,83"/>
-<area shape="rect" id="node2" href="$classServer.html#ab3e5ca3979006745dfd8f1ec4c06c885" title="Obtém o nome do servidor." alt="" coords="257,5,389,32"/>
-<area shape="rect" id="node3" href="$classSystem.html#a15e7e3b270b46efb890029fe6aee34f1" title=" " alt="" coords="223,56,423,83"/>
-<area shape="rect" id="node4" href="$classSystem.html#ad1de91e5ec17795f2994de4ee0635bc1" title="Define o servidor atualmente selecionado." alt="" coords="228,107,417,133"/>
-</map>

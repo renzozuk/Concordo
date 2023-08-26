@@ -1,6 +1,0 @@
-<map id="splitting" name="splitting">
-<area shape="rect" id="node1" title="Divide uma string em duas partes no primeiro espaço encontrado." alt="" coords="301,31,376,57"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#af7cb3afdaa40e4e0c264b2952bf833ab" title="Cria um canal com base nos parâmetros fornecidos." alt="" coords="117,5,245,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a377ddf610fb01d678c1b4949a4dfcb40" title="Lê e processa os comandos do usuário." alt="" coords="108,56,253,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Função principal do aplicativo Concordo." alt="" coords="5,56,60,83"/>
-</map>

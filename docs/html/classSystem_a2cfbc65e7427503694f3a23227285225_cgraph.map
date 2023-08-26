@@ -1,4 +1,0 @@
-<map id="System::loggingIn" name="System::loggingIn">
-<area shape="rect" id="node1" title="Faz o login de um usuário no sistema." alt="" coords="5,5,144,32"/>
-<area shape="rect" id="node2" href="$classSystem.html#a12354c66ecb3c87dfc47cd80431b9699" title="Define o usuário atualmente logado no sistema." alt="" coords="192,5,380,32"/>
-</map>

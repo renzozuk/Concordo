@@ -1,7 +1,0 @@
-<map id="System::printMessages" name="System::printMessages">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,180,108"/>
-<area shape="rect" id="node2" href="$classChannel.html#a53361b01056aea15c93053feb470b715" title=" " alt="" coords="256,5,399,32"/>
-<area shape="rect" id="node3" href="$classServer.html#ab3e5ca3979006745dfd8f1ec4c06c885" title="Obtém o nome do servidor." alt="" coords="261,56,393,83"/>
-<area shape="rect" id="node4" href="$classChannel.html#afa00934e2d4d1f3e15f6f984b941fcc3" title=" " alt="" coords="260,107,395,133"/>
-<area shape="rect" id="node5" href="$classSystem.html#a2b0e82bcd051b861bbecbab74f648598" title="Obtém o nome de usuário correspondente a um determinado ID." alt="" coords="228,157,427,184"/>
-</map>

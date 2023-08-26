@@ -1,5 +1,0 @@
-<map id="System::setLoggedInUser" name="System::setLoggedInUser">
-<area shape="rect" id="node1" title="Define o usuário atualmente logado no sistema." alt="" coords="203,31,391,57"/>
-<area shape="rect" id="node2" href="$classSystem.html#a66379777d789c071beb96b3b0253f212" title="Desconecta o usuário atualmente logado no sistema." alt="" coords="5,5,155,32"/>
-<area shape="rect" id="node3" href="$classSystem.html#a2cfbc65e7427503694f3a23227285225" title="Faz o login de um usuário no sistema." alt="" coords="11,56,149,83"/>
-</map>
